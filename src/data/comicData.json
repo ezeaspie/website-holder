@@ -1,0 +1,79 @@
+[
+    {
+    "comicId":0,
+    "chapter":0,
+    "pages":12,
+    "title":"Small Time Detective",
+    "description":"Madeline Harbour confronts a high-school answer sheet thief in her pursuit of good."
+    },
+    {
+        "comicId":0,
+        "chapter":1,
+        "pages":12,
+        "title":"To Become a Heroine",
+        "description":"Madeline and her friend Julian Gaitan discuss Madeline's dreams of becoming a heroine but come face to face with the dangers of Northern Serenity"
+    },
+    {
+        "comicId":0,
+        "chapter":2,
+        "pages":13,
+        "title":"Sassy Steel",
+        "description":"Madeline meets up with the sassy and tough Juliette Sandover, who needs some convincing to join Madeline's cause."
+    },
+    {
+        "comicId":0,
+        "chapter":3,
+        "pages":13,
+        "title":"Mother's Concerns",
+        "description":"Clarissa Harbour and her daughter Madeline are best friends - but constantly are at ends. Madeline tries to convince her mother to help - even if that means opening up old wounds."
+    },
+    {
+        "comicId":0,
+        "chapter":4,
+        "pages":17,
+        "title":"The First Case",
+        "description":"Madeline travels to the Palisades to meet Ada Lima, who has had her valuable ruby ring stolen from her home."
+    },
+    {
+        "comicId":0,
+        "chapter":5,
+        "pages": 17,
+        "title":"Ada, Robert, and the Ring",
+        "description":"Madeline meets Robert Silva - the wealthy and arrogant husband of Ada Lima and gets access to important evidence. Meanwhile, a argument brews over in the Isle of Tranqulity."
+    },
+    {
+        "comicId":0,
+        "chapter":6,
+        "pages":21,
+        "title":"The Daughter of the NSPD",
+        "description":"In an effort to expand what little evidence and information she has to try to solve the case, Madeline sends Juliette and Julian to the NSPD to get help but a fiery figure in Maxine Rubin stands in their way."
+    },
+    {
+        "comicId":0,
+        "chapter":7,
+        "pages":17,
+        "title":"All that Glitters",
+        "description": "Juliette and Julian learn about Irene's troubled past, while Madeline tries to outwit her mother and interview the local jeweler, Jamie Banks."
+    },
+    {
+        "comicId":1,
+        "chapter":0,
+        "pages":3,
+        "title":"Maddie and Jules: The Not-So Dynamic Duo!",
+        "description":"Maddie is optimistic, priviliged, rich, and oh so naive. Jules is pessimistic, poor, and easily annoyed. Together, they form a not-so-dynamic duo that constantly argue over the smallest things."
+    },
+    {
+        "comicId":1,
+        "chapter":1,
+        "pages":3,
+        "title":"Maddie and Maxine",
+        "description":"Madeline and Maxine are forced to share a bed."
+    },
+    {
+        "comicId":1,
+        "chapter":2,
+        "pages":8,
+        "title":"Maxine : Disillusioned",
+        "description":"Intial chapter for 'Heroine Rises', in where Maxine Rubin of the NSPD is the main character. Maxine must rebuild her reuptation after constant failures and win back the trust of the NSPD's strict commisioner, James Vernon."
+    }
+]
