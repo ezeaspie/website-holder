@@ -20,7 +20,7 @@ class HeroineRises extends Component{
             <div className="comic-synopsis">
             {comicMeta.synopsis}
                 </div>
-            <img src={comicMeta.coverImage} alt="cover" className="comic-cover"/>
+            <img src={comicMeta.coverImage} alt={`${comicMeta.title} Cover Art`} className="comic-cover"/>
         </div>
       </div>
 

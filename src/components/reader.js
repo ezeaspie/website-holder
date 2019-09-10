@@ -115,7 +115,7 @@ class Reader extends Component {
                 </div>
                 <div className="reader-image">
                     <Link to={link}>
-                        <img alt="page of comic" src={withPrefix(imageSource)} style={{width:'100%', maxWidth:'920px'}}/>
+                        <img alt={`${chapterInfo.comicName} Chapter ${chapterInfo.chapterId+1} Page ${chapterInfo.currentPage+1}`} src={withPrefix(imageSource)} style={{width:'100%', maxWidth:'920px'}}/>
                     </Link>
                 </div>
                 <h5 style={{textAlign:"center"}}>Page {chapterInfo.currentPage+1}</h5>
