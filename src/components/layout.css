@@ -1976,6 +1976,7 @@ footer a {
 
 .blog-preview-content{
   padding: 1em;
+  text-align: left;
 }
   .slick-slide,.slick-slide a{
     height:20rem;
