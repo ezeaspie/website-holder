@@ -1730,6 +1730,57 @@ html{
   display: inline;
 }
 
+.success-popup{
+  position:fixed;
+  width:80%;
+  right:10%;
+  top:100%;
+  display: flex;
+  background: #1d1d1d;
+  padding:1rem;
+  text-align: center;
+  border-radius:5px;
+  border:solid 2px #EDEAE5;
+  transition:ease-in-out .4s all;
+}
+
+.show-popup{
+  top:40%;
+}
+
+.success-exit {
+  border:none;
+}
+
+.input-error {
+  box-sizing: border-box;
+  border:solid 2px red;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top:1em;
+}
+
+.email-form h2 {
+  font-family: 'Staatliches';
+  border-bottom: 2px solid #fff;
+  font-weight: normal;
+}
+
+.email-form button {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.sign-up-input {
+  padding:.5em;
+}
+
 .chapter-preview{
   display: flex;
   flex-direction:column;

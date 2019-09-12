@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql , Link} from 'gatsby'
+import EmailForm from '../components/EmailForm';
 
 import Header from './header'
 import './layout.css'
@@ -28,6 +29,7 @@ const Layout = ({ children }) => (
         >
           {children}
           <footer>
+           <EmailForm /> 
             <div className="footer-main">
             <ul className="footer-nav">
               <li className="footer-title">Navigation</li>
