@@ -1741,6 +1741,7 @@ html{
   text-align: center;
   border-radius:5px;
   border:solid 2px #EDEAE5;
+  -webkit-transition:ease-in-out .4s all;
   transition:ease-in-out .4s all;
 }
 
@@ -1908,6 +1909,19 @@ footer a {
   display: flex;
   align-content: center;
   align-items: center;
+}
+
+.blog-post-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:100%;
+    align-content: center;
+}
+
+.blog-preview {
+    margin-left: auto;
+    margin-right:auto;
 }
 
 @-webkit-keyframes hide {

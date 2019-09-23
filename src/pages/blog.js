@@ -9,7 +9,8 @@ const Blog = ({data}) => (
   <Layout>
     <SEO title="Blog" keywords={[`art`, `tutorials`, `drawing`]} />
     <div className="container">
-    <h4>{data.allContentfulBlogPost.totalCount} Posts</h4>
+      <div className="blog-post-list">
+      <h4>{data.allContentfulBlogPost.totalCount} Posts</h4>
         {data.allContentfulBlogPost.edges.map(({ node },i) => (
             <Link to={'/blog/' + node.slug} key={i}>
             <div className="blog-preview">
@@ -22,6 +23,7 @@ const Blog = ({data}) => (
             </div>
             </Link>
         ))}
+      </div>
     </div>
     
   </Layout>
