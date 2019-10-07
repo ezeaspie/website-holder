@@ -1272,7 +1272,6 @@ html{
 }
 
 .list-open{
-  max-height: 1000px;
   -webkit-transition:ease .5s all;
   transition:ease .5s all;
 }

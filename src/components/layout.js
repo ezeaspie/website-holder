@@ -42,7 +42,7 @@ const Layout = ({ children }) => (
             </ul>
             <ul className="footer-contact">
                 <li className="footer-title">Contact</li>
-                <li><a href="https://www.instagram.com/ezeaspie/"><b>Instagram</b></a></li>
+                <li><a href="https://www.instagram.com/ezequiel_espinoza_art/"><b>Instagram</b></a></li>
                 <li><b>Email</b> - ezequielnoza@gmail.com</li>
                 <li><a href="https://www.deviantart.com/ezeaspie"><b>DeviantArt</b></a></li>
             </ul>

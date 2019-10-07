@@ -24,7 +24,7 @@ class About extends Component {
             <p>Outside of Web Development and Art, I enjoy football/soccer and taking care of my Dalmatian Molly aquarium.</p>
             <p>If you would like to contact me in regards to art, web development, or simple conversation, feel free to contact me through Instagram or email.</p>
             <ul>
-                <li><a href="https://www.instagram.com/ezeaspie/"><b>Instagram</b> - I post my best art as well as updates to comics. Sometimes (meaning: almost never) I post pictures of myself and other things I do.</a></li>
+                <li><a href="https://www.instagram.com/ezequiel_espinoza_art/"><b>Instagram</b> - I post my best art as well as updates to comics. Sometimes (meaning: almost never) I post pictures of myself and other things I do.</a></li>
                 <li><b>Email</b> - ezequielnoza@gmail.com</li>
                 <li><a href="https://www.deviantart.com/ezeaspie"><b>DeviantArt</b> - Where I post almost any art I make - good or bad</a></li>
             </ul>
