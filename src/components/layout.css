@@ -1449,7 +1449,7 @@ html{
 
 .blog-preview-image{
   min-width:80%;
-  min-height: 350px;
+  min-height: 200px;
   border-radius: 5px;
   margin: 0 auto;
   width:20%;
