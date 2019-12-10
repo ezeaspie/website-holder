@@ -6,7 +6,6 @@ let comicData = [];
 fs.readFile(`./src/data/comicData.json`, 'utf8', function (err, data) {
   if (err) throw err;
   comicData = JSON.parse(data);
-  console.log(comicData);
 });
 
 exports.createPages = ({ graphql, actions }) => {
@@ -117,7 +116,6 @@ exports.createPages = ({ graphql, actions }) => {
           throw result.errors
         }
         const blogTemplate = path.resolve(`./src/templates/blog-post.js`);
-        console.log(result.data.allContentfulBlogPost.edges);
         result.data.allContentfulBlogPost.edges.forEach((post)=>{
           createPage({
             path:'blog/' + post.node.slug,
