@@ -1125,12 +1125,16 @@ pre tt:after {
   opacity: 1;
 }
 
+.gallery-header {
+  background: #1d1d1d;
+}
+
 header {
   border-bottom:solid 1px #d3d3d3;
   background: #1d1d1d;
 }
 
-header a{
+header a, .gallery-header li{
   text-decoration: none;
   color:#EDEAE5;
   -webkit-transition:ease .5s all;
@@ -1138,7 +1142,8 @@ header a{
   display: inline-block;
 }
 
-header a:hover{
+header a:hover, .gallery-header li:hover{
+  cursor: pointer;
   opacity: .6;
 }
 
@@ -1152,7 +1157,7 @@ header a:hover{
   font-family: 'Staatliches';
 }
 
-header ul{
+header ul, .gallery-header{
   list-style-type: none;
   margin: 0;
   display: flex;
@@ -1160,12 +1165,12 @@ header ul{
   justify-content: space-around;
 }
 
-header li{
+header li, .gallery-header li{
   font-family: 'Staatliches';
   margin: 0;
   width: 100%;
 }
-header ul a{
+header ul a, .gallery-header li{
   padding: .5em;
   text-align: center;
   border-left:solid 1px #d3d3d3;
@@ -1176,7 +1181,7 @@ header ul a{
   width: 100%;
 }
 
-header a:hover{
+header a:hover, .gallery-header li:hover{
   -webkit-transition:ease .5s all;
   transition:ease .5s all;
 }
@@ -2040,14 +2045,14 @@ footer a {
       max-width:45%;
   }
   
-  header ul{
+  header ul, .gallery-header{
   list-style-type: none;
   margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-  header ul a{
+  header ul a, .gallery-header li{
   border-bottom:none;
 }
   

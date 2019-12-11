@@ -13,12 +13,12 @@ class Gallery extends Component {
         hidden:true,
         content:null, //Change Content on Click of Gallery Item
       },
-      sortedData:this.sortData(),
+      sortedData:this.sortData(0),
     }
     this.handleClick = this.handleClick.bind(this);
   }
 
-  sortData = () => {
+  sortData = (category) => {
 
     const shuffle = (array) => {
       for (var i = array.length-1; i >=0; i--) {
@@ -37,7 +37,13 @@ class Gallery extends Component {
     const sorted = [];
     let galleryItemData = data.edges;
     galleryItemData = shuffle(galleryItemData);
-    galleryItemData.map(({node},i) =>{
+    let filteredData = galleryItemData.filter(({node}) => {
+      return node.category === category;
+    })
+
+    console.log(filteredData);
+
+    filteredData.map(({node},i) =>{
       node.id = i;
       if(node.featured){
         sorted.unshift(node);
@@ -93,7 +99,12 @@ class Gallery extends Component {
       <div dangerouslySetInnerHTML={{__html:this.state.sideBar.content.description.childMarkdownRemark.html}}/>
     </div>
     }
-    
+    <ul className="gallery-header">
+      <li 
+      onClick= { ()=>this.setState({sortedData: this.sortData(0)})}>Main</li>
+      <li onClick = {()=>this.setState({sortedData: this.sortData(1)})}>Heroine Rises Covers</li>
+    </ul>
+
     <div className="gallery">
       {
         this.state.sortedData.map((node)=>{
@@ -139,6 +150,7 @@ export const query = graphql `query{
       featured
       creationDate
       medium
+      category
       title
       image {
         resize(width: 100) {
