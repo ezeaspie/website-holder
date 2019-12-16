@@ -125,7 +125,7 @@ class Gallery extends Component {
                   boxShadow: '5px 5px 10px rgba(0,0,0,.3)',
                 }
               }
-              alt={node.title}
+              alt={this.state.sortedData[0].category === 1 ? 'Heroine Rises ' + node.title: node.title}
               fluid={node.image.fluid}
               />
               <div className="gallery-item-tag">
