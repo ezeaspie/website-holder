@@ -4,7 +4,7 @@
     "chapter":0,
     "pages":12,
     "title":"Small Time Detective",
-    "description":"Madeline Harbour confronts a high-school answer sheet thief in her pursuit of good."
+    "description":"Madeline Harbour confronts a high-school answer sheet thief in her pursuit of the greater good."
     },
     {
         "comicId":0,
@@ -70,6 +70,13 @@
         "description":"Madeline, Juliette, and Julian reunite at Grant Park to seek out Irene's daughter Maeve, hoping that the young butterfly chaser can lead them to the former Faccion woman."
     },
     {
+        "comicId":0,
+        "chapter":10,
+        "pages":8,
+        "title":"Smoke and Mirrors",
+        "description":"Maeve Colbrun-Lassiter explains the ins and outs of life in the Coastal Swamp until an unexpected visitor arrives to wreak havoc on the team."
+    },
+    {
         "comicId":1,
         "chapter":0,
         "pages":3,
@@ -80,7 +87,7 @@
         "comicId":1,
         "chapter":1,
         "pages":3,
-        "title":"Sleep Issues",
+        "title":"Maddie and Maxine",
         "description":"Madeline and Maxine are forced to share a bed."
     },
     {
@@ -89,5 +96,12 @@
         "pages":8,
         "title":"Maxine : Disillusioned",
         "description":"Intial chapter for 'Heroine Rises', in where Maxine Rubin of the NSPD is the main character. Maxine must rebuild her reuptation after constant failures and win back the trust of the NSPD's strict commisioner, James Vernon."
+    },
+    {
+        "comicId":1,
+        "chapter":3,
+        "pages": 4,
+        "title": "The Art of Heroine Rises",
+        "description": "An archival project meant to catalog the various concepts and sketches of characters, settings, and objects from 'Heroine Rises'."
     }
 ]
