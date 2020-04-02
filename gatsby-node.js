@@ -89,6 +89,40 @@ exports.createPages = ({ graphql, actions }) => {
           comicTitle:"One Shots"
         }
       })
+
+  const infoTemplate = path.resolve(`src/templates/info-page.js`)
+  const result = graphql(`
+    {
+      allMarkdownRemark(
+        filter: {frontmatter: {path: {ne:null}}}
+        sort: { order: ASC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    console.log(result);
+    if (result.errors) {
+      reporter.panicOnBuild(`Error while running GraphQL query.`)
+      return
+    }
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      console.log(node.frontmatter.path);
+      createPage({
+        path: node.frontmatter.path,
+        component: infoTemplate,
+        context: {}, // additional data can be passed via context
+      })
+    })
+  })
+
       return graphql(
         `
         {

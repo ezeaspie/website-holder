@@ -45,7 +45,7 @@ const EmailForm = () => {
           type="text"
           onChange={handleEmailChange}
         />
-        <button class="btn btn-call-to-action" type="submit">Subscribe</button>
+        <button className="btn btn-call-to-action" type="submit">Subscribe</button>
         <EmailSuccessPopUp isClosed={popUpClosed} handleClose={handleClose}/>
       </div>
     </form>

@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
-
-
 /*Slick stuff
 /* Slider */
 .slick-slider
@@ -1822,7 +1820,7 @@ html{
 footer{
   background: #1d1d1d;
   color:#edeae5;
-  margin-top:1em;
+  padding-top:1em;
   display: flex;
   flex-direction: column;
 }
@@ -1928,6 +1926,168 @@ footer a {
     margin-right:auto;
 }
 
+.introduction,.wiki-container,.comic-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.wiki-section{
+    background: #2d2d2d;
+    color: #EDEAE5
+}
+
+.introduction h1{
+    font-size:4rem;
+}
+
+.intro-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.intro-tagline-hidden {
+    display: none;
+}
+
+.hub-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.hub-nav li:first-child{
+    font-weight: bold;
+    background:none;
+}
+
+.hub-nav li{
+    margin: 0 1rem 0 0;
+    background: #ffc500;
+    -webkit-transition:ease-in-out .4s;
+    transition:ease-in-out .4s;
+}
+
+.hr-btn{
+  transition:ease-in-out .4s;
+}
+
+.hr-btn a:hover{
+  color:#000;
+  opacity: 1;
+}
+
+.hr-btn:hover, .active-btn {
+  background: #ffc500;
+}
+
+.hub-nav a{
+    color:#000;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height:100%;
+    padding: 0 .5rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.introduction h2{
+    font-size:2rem;
+}
+
+.introduction h3{
+    font-size:1.2rem;
+}
+
+#tagline-trigger{
+    padding: .5rem 1rem;
+    text-align: center;
+    display: inline-block;
+    background: #ffc500;
+    -webkit-transition:ease-in-out .4s;
+    transition:ease-in-out .4s;
+}
+
+#tagline-trigger:hover,.hub-nav li:hover{
+    cursor: pointer;
+    background: #e6b100;
+}
+
+.wiki-item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin:0 auto;
+}
+
+.wiki-description {
+    width: 70%;
+}
+
+.wiki-description p{
+    font-size:1rem;
+}
+
+.wiki-item-image, .comic-start-option {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  width:30%;
+}
+
+.wiki-item-image img{
+  width: 100%;
+}
+
+.wiki-item-image h5,.comic-start-option h5 {
+  background: #EDEAE5;
+  color:#2d2d2d;
+  text-align: center;
+  padding: 1rem;
+  font-size:1.2rem;
+}
+
+.comic-start-option h5{
+  background: #ffc500;
+}
+
+.comic-start-options{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.comic-start-option a, .comic-start-option div{
+    display: flex;
+    flex-direction: column;
+}
+
+.comic-start-option{
+    min-width:120px;
+    max-width: 250px;
+    padding: 0;
+    transition:linear .1s;
+}
+
+.comic-start-option:hover{
+    transform: scale(1.05);
+}
+
+.comic-start-option h5{
+    font-size: .8rem;
+}
+
 @-webkit-keyframes hide {
   0%{
    opacity: 1;
@@ -1970,6 +2130,13 @@ footer a {
 
 @media screen and (min-width:650px){
   
+  .wiki-item {
+     flex-direction: row;
+  }
+  .comic-start-option h5{
+     font-size:1rem;
+   }
+    
   .blog-preview-image{
   min-width:80%;
   min-height: 150px;
@@ -2128,6 +2295,13 @@ footer a {
 }
 
 @media screen and (min-width:900px){
+    
+    .intro-header{
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+    }
+    
     .slick-slide,.slick-slide a{
     height:25rem;
   }

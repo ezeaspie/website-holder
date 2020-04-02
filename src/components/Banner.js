@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import { withPrefix} from "gatsby";
 import comicData from '../data/comicData.json';
 import Carousel from './carousel';
-
 import GalleryPreview from '../images/site/WebBanner.jpg';
 import BlogPreview from '../images/site/blogCover.jpg';
+import HeroineRisesPreview from '../images/site/HRBanner.jpg';
 
 class Banner extends Component {
 
@@ -34,6 +34,12 @@ class Banner extends Component {
     getBannerStateVariables(){
         let latestChapterId = this.getCurrentHeroineRisesChapter();
         let bannerInfo = [
+            {
+                title:"HEROINE RISES",
+                description:"Follow Madeline Harbour in her quest to change her corrupt and dangerous city of Northern Serenity!",
+                image:HeroineRisesPreview,
+                link:"/heroine-rises-hub",
+            },
             {
                 title:"GALLERY",
                 description:"View all of my artistic creations - ranging from early pencil sketches to maps and concept art for characters and settings!",
@@ -87,6 +93,12 @@ class Banner extends Component {
     render(){
         let latestChapterId = this.getCurrentHeroineRisesChapter();
         let bannerInfo = [
+            {
+                title:"HEROINE RISES",
+                description:"Follow Madeline Harbour in her quest to change her corrupt and dangerous city of Northern Serenity!",
+                image:HeroineRisesPreview,
+                link:"/heroine-rises-hub",
+            },
             {
                 title:"GALLERY",
                 description:"View all of my artistic creations - ranging from early pencil sketches to maps and concept art for characters and settings!",
