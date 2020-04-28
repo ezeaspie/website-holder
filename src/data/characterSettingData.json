@@ -1,0 +1,134 @@
+[
+  {
+    "url": "madeline-harbour",
+    "stats":{
+      "str": 4,
+      "chr": 8.5,
+      "agi": 8,
+      "ldr": 7,
+      "end": 3,
+      "int": 8.5
+    },
+    "physical":{
+      "name": "Madeline Lindsay Harbour",
+      "heightFt": 5,
+      "heightIn":6,
+      "eye": "Blue",
+      "hair": "Blonde",
+      "birthPlace":"Isle of Tranquility",
+      "birthday": "October 14",
+      "color": "ffc500",
+      "age":18
+    }
+  },
+  {
+    "url":"juliette-sandover",
+    "stats":{
+      "str": 7,
+      "chr": 4.5,
+      "agi": 6.5,
+      "ldr": 6,
+      "end": 9.5,
+      "int": 6.5
+    },
+    "physical":{
+      "name": "Juliette Anais Sandover",
+      "heightFt": 5,
+      "heightIn":6,
+      "eye": "Brown",
+      "hair": "Brown",
+      "birthPlace":"Isle of Tranquility",
+      "birthday": "January 3",
+      "color": "ba4848",
+      "age":19
+    }
+  },
+  {
+    "url":"julian-gaitan",
+    "stats":{
+      "str": 7.5,
+      "chr": 4,
+      "agi": 5,
+      "ldr": 5,
+      "end": 8,
+      "int": 7.5
+    },
+    "physical":{
+      "name": "Julian Gaitan Garcia",
+      "heightFt": 5,
+      "heightIn":7,
+      "eye": "Dark Brown",
+      "hair": "Brown",
+      "birthPlace":"La Noria",
+      "birthday": "November 4",
+      "color": "2473cc",
+      "age":18
+    }
+  },
+  {
+    "url":"maxine-rubin",
+    "stats":{
+      "str": 7.5,
+      "chr": 2,
+      "agi": 7,
+      "ldr": 7.5,
+      "end": 7,
+      "int": 6
+    },
+    "physical":{
+      "name": "Maxine Amelia Rubin",
+      "heightFt": 5,
+      "heightIn":4,
+      "eye": "Light Brown",
+      "hair": "Strawberry Blonde (dyed Red)",
+      "birthPlace":"Chantilly",
+      "birthday": "December 6",
+      "color":"f35336",
+      "age":18
+    }
+  },
+  {
+    "url":"clarissa-harbour",
+    "stats":{
+      "str": 3,
+      "chr": 6,
+      "agi": 7,
+      "ldr": 7,
+      "end": 2,
+      "int": 8.5
+    },
+    "physical":{
+      "name": "Clarissa Lane Harbour",
+      "heightFt": 5,
+      "heightIn":8,
+      "eye": "Blue",
+      "hair": "Platinum Blonde",
+      "birthPlace":"New Serenity",
+      "birthday": "February 4",
+      "color":"FFFF61",
+      "age":46
+    }
+  },
+  {
+    "url":"ada-lima",
+    "stats":{
+      "str": 5,
+      "chr": 8,
+      "agi": 2,
+      "ldr": 4,
+      "end": 5,
+      "int": 6
+    },
+    "physical":{
+      "name": "Ada Asier de Santos Lima Silva",
+      "heightFt": 5,
+      "heightIn":10,
+      "eye": "Brown",
+      "hair": "Dark Brown",
+      "birthPlace":"Paradise, Southern Serenity",
+      "birthday": "Febuary 23rd",
+      "age":38,
+      "color":"310a73"
+    }
+  }
+]

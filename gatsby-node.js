@@ -3,9 +3,14 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 var fs = require('fs');
 
 let comicData = [];
+let charSettData = [];
 fs.readFile(`./src/data/comicData.json`, 'utf8', function (err, data) {
   if (err) throw err;
   comicData = JSON.parse(data);
+});
+fs.readFile(`./src/data/characterSettingData.json`, 'utf8', function (err, data) {
+  if (err) throw err;
+  charSettData = JSON.parse(data);
 });
 
 exports.createPages = ({ graphql, actions }) => {
@@ -113,12 +118,15 @@ exports.createPages = ({ graphql, actions }) => {
       reporter.panicOnBuild(`Error while running GraphQL query.`)
       return
     }
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      console.log(node.frontmatter.path);
+    result.data.allMarkdownRemark.edges.forEach(({ node },i) => {
+      console.log(node.frontmatter.path, i);
       createPage({
         path: node.frontmatter.path,
         component: infoTemplate,
-        context: {}, // additional data can be passed via context
+        context: {
+          stats: charSettData[i].stats,
+          physical: charSettData[i].physical,
+        }, // additional data can be passed via context
       })
     })
   })

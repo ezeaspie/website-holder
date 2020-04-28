@@ -30,7 +30,6 @@ class Reader extends Component {
     }
 
     render(){
-
         let chapterInfo = this.props.chapterInfo;
 
         let comicName = comicData[chapterInfo.comicId].url;
@@ -38,6 +37,13 @@ class Reader extends Component {
         let imageSource = `/comics/${chapterInfo.comicId}/${chapterInfo.chapterId}/${chapterInfo.currentPage}.jpg`;
 
         let link = `/${comicName}/${chapterInfo.chapterId}/${chapterInfo.currentPage+1}`;
+
+        let imgAlt = `${chapterInfo.comicName} Chapter ${chapterInfo.chapterId+1} Page ${chapterInfo.currentPage+1}`
+
+        if(chapterInfo.currentPage === 0){
+            imgAlt = `${chapterInfo.comicName} Chapter ${chapterInfo.chapterId+1} Cover`
+        }
+
 
         if(this.state.isFinalPage){
             if(!this.state.hasNextChapter){
@@ -57,7 +63,9 @@ class Reader extends Component {
             <li 
                 className={this.state.isPageDropdown?"list-open":"list-closed"}
                 onMouseOver={()=>{this.setState({isPageDropdown: true})}}
+                onFocus={()=>{this.setState({isPageDropdown: true})}}
                 onMouseOut={()=>{this.setState({isPageDropdown:false})}}
+                onBlur={()=>{this.setState({isPageDropdown:false})}}
             >
             <h5>{i+1}</h5>
             </li>
@@ -70,7 +78,9 @@ class Reader extends Component {
                     <div className="chapter-list-div">
                         <h5 
                         onMouseOver={()=>{this.setState({isChapterDropdown: true})}}
+                        onFocus={()=>{this.setState({isChapterDropdown: true})}}
                         onMouseOut={()=>{this.setState({isChapterDropdown:false})}}
+                        onBlur={()=>{this.setState({isChapterDropdown:false})}}
                         onClick={()=>{this.setState({isChapterDropdown:!this.state.isChapterDropdown})}}
                         className="reader-chapter-title">{chapterInfo.chapterId+1}. {chapterInfo.chapterTitle}</h5>
                         <ul className={this.state.isChapterDropdown?"list-open collapse-list":"list-closed collapse-list"}>
@@ -83,7 +93,9 @@ class Reader extends Component {
 
                                 <li 
                                 onMouseOver={()=>{this.setState({isChapterDropdown: true})}}
+                                onFocus={()=>{this.setState({isChapterDropdown: true})}}
                                 onMouseOut={()=>{this.setState({isChapterDropdown:false})}}
+                                onBlur={()=>{this.setState({isChapterDropdown:false})}}
                                 key ={`chapter${chapter.chapter}`}
                                 className={this.state.isChapterDropdown?"list-open":"list-closed"}
                                 >
@@ -100,7 +112,9 @@ class Reader extends Component {
                         <h5 
                         className="reader-page-number"
                         onMouseOver={()=>{this.setState({isPageDropdown: true})}}
+                        onFocus={()=>{this.setState({isPageDropdown: true})}}
                         onMouseOut={()=>{this.setState({isPageDropdown:false})}}
+                        onBlur={()=>{this.setState({isPageDropdown:false})}}
                         onClick={()=>{this.setState({isPageDropdown:!this.state.isPageDropdown})}}
                         >{chapterInfo.currentPage+1}</h5>
                         <ul className={this.state.isPageDropdown?"list-open collapse-list":"list-closed collapse-list"}>
@@ -115,7 +129,7 @@ class Reader extends Component {
                 </div>
                 <div className="reader-image">
                     <Link to={link}>
-                        <img alt={`${chapterInfo.comicName} Chapter ${chapterInfo.chapterId+1} Page ${chapterInfo.currentPage+1}`} src={withPrefix(imageSource)} style={{width:'100%', maxWidth:'920px'}}/>
+                        <img alt={imgAlt} src={withPrefix(imageSource)} style={{width:'100%', maxWidth:'920px'}}/>
                     </Link>
                 </div>
                 <h5 style={{textAlign:"center"}}>Page {chapterInfo.currentPage+1}</h5>

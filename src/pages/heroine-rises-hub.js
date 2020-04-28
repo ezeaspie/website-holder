@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
-import { Link, graphql } from "gatsby"
 import SEO from '../components/seo'
 import Madeline from '../images/site/Maddie0.jpg';
 import Juliette from '../images/site/Juliette0.jpg';
@@ -93,7 +92,7 @@ class Hub extends Component {
     <Layout>
         <SEO title="Heroine Rises" keywords={[`heroine`, `rises`, `comic`]} />
         <div>
-          <img src={Banner}></img>
+          <img src={Banner} alt="Heroine Rises Banner"></img>
         </div>
           <div className="introduction">
             <div className="intro-header">

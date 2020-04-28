@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import Img from 'gatsby-image';
-
 
 class WikiItem extends Component {
   constructor(props){
@@ -13,7 +11,7 @@ class WikiItem extends Component {
     return(
       <li className="wiki-item">
         <div className="wiki-item-image">
-          <img src={this.props.image} />
+          <img src={this.props.image} alt={this.props.title}/>
           <h5 className="wiki-title">{this.props.title}</h5>
         </div>
         <div className="wiki-description">

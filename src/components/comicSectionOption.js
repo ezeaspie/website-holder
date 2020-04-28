@@ -13,12 +13,12 @@ class ComicSectionOption extends Component {
         {
           this.props.disabled?
           <div style={{opacity:'.6'}}>
-            <img src={this.props.image}/>
+            <img src={this.props.image} alt={this.props.title}/>
             <h5>{this.props.title}</h5>
           </div>
           :
           <a href={this.props.link}>
-            <img src={this.props.image}/>
+            <img src={this.props.image} alt={this.props.title}/>
             <h5>{this.props.title}</h5>
           </a>
         }
