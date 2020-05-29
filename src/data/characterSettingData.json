@@ -130,5 +130,49 @@
       "age":38,
       "color":"310a73"
     }
+  },
+  {
+    "url":"maeve-colbrun",
+    "stats":{
+      "str": 5,
+      "chr": 7,
+      "agi": 7,
+      "ldr": 5,
+      "end": 6,
+      "int": 4
+    },
+    "physical":{
+      "name": "Maeve Colbrun-Lassiter",
+      "heightFt": 5,
+      "heightIn":2,
+      "eye": "Brown",
+      "hair": "Dark Brown",
+      "birthPlace":"Chantilly",
+      "birthday": "November 4th",
+      "age":14,
+      "color":"8B1953"
+    }
+  },
+  {
+    "url":"irene-lassiter",
+    "stats":{
+      "str": 8,
+      "chr": 2.5,
+      "agi": 8,
+      "ldr": 6,
+      "end": 7,
+      "int": 4
+    },
+    "physical":{
+      "name": "Irene Lassiter",
+      "heightFt": 5,
+      "heightIn":9,
+      "eye": "Brown",
+      "hair": "Black",
+      "birthPlace":"Serenity Heights",
+      "birthday": "January 1st",
+      "age":35,
+      "color":"2aba92"
+    }
   }
 ]

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CharData from '../data/characterSettingData.json';
+import {Link} from 'gatsby';
 
 class WikiNav extends Component {
   constructor(props) {
@@ -17,8 +18,10 @@ class WikiNav extends Component {
             if(i < 3){
               return (
                 <li>
-                  <a href={"https://www.ezequielespinoza.com/heroine-rises/" + item.url}>{item.physical.name}</a>
-                </li>
+                <Link to={"/heroine-rises/" + item.url} key={i}>
+                  {item.physical.name}
+                </Link>
+                </li>     
               )
             }
           })
@@ -31,7 +34,9 @@ class WikiNav extends Component {
             if(i >= 3){
               return (
                 <li>
-                  <a href={"https://www.ezequielespinoza.com/heroine-rises/" + item.url}>{item.physical.name}</a>
+                  <Link to={"/heroine-rises/" + item.url} key={"s" + i}>
+                    {item.physical.name}
+                  </Link>
                 </li>
               )
             }

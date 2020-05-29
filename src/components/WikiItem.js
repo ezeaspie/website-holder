@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'gatsby'
 
 class WikiItem extends Component {
   constructor(props){
@@ -16,6 +17,11 @@ class WikiItem extends Component {
         </div>
         <div className="wiki-description">
           {this.props.description}
+          <Link to={this.props.link}>
+            <button className="btn btn-call-to-action">
+            Read Now!
+            </button>
+          </Link>
         </div>
       </li>
     )
