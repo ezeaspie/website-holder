@@ -11,6 +11,4 @@ mainImg: '../images/wiki/maxine0.jpg'
 <p>-Maxine Rubin to Juliette Sandover<sup><a href="https://www.ezequielespinoza.com/heroine-rises/6/12">[1]</a></sup></p>
 </div>
 
-**Maxine Amelia Rubin** is a Lieutenant within the Northern Serenity Police Department. She forms an unofficial duo with Officer Damien Schmidt. Maxine is a rising star within the department and is one of the youngest officers to reach the Sergeant and Lieutenant rank. 
-
-Juliette has a hardy personality and is typically abrasive to people she does not trust. This trait often leads to her getting the team in trouble but sometimes provides a sharp edge to the team in certain situations. Juliette is fiercly loyal to Madeline specifically and will always do what she thinks is best for her - even if it might not be the best decision.
+Lieutenant **Maxine Amelia Rubin** is a senior officer within the Northern Serenity Police Department. During the events of *The Ring of Deceit* arc, she forms an unofficial duo with Officer Damien Schmidt. Maxine is touted as a rising star within the department and is one of the youngest officers to reach the Sergeant and then Lieutenant rank. 

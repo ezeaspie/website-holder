@@ -69,22 +69,26 @@ class Hub extends Component {
       {
         name: "Madeline Harbour",
         image: Madeline,
-        description:<p>Rich, Ambitious, but Naive. Madeline is the leader of her detective group and dreams of being a heroine. Her physical weakness is mitigated by her quick thinking and empathy.</p>
+        description:<p>Rich, Ambitious, but Naive. Madeline is the leader of her detective group and dreams of being a heroine. Her physical weakness is mitigated by her quick thinking and empathy.</p>,
+        link: `heroine-rises/madeline-harbour`
       },
       {
         name:"Juliette Sandover",
         image:Juliette,
-        description:<p>Brash, Hardy, and Sassy. Juliette is the team's rock - or steel. Her bold personality may get her in trouble, but under Madeline's watch, Juliette gives the team a sharp edge in confrontations.</p>
+        description:<p>Brash, Hardy, Sassy. Juliette is the team's rock - or steel. Her bold personality may get her in trouble, but under Madeline's watch, Juliette gives the team a sharp edge in confrontations.</p>,
+        link:`heroine-rises/juliette-sandover`
       },
       {
         name:"Julian Gaitan",
         image:Julian,
-        description:<p>Eager, Idealistic, and a wee bit Cowardly. Julian tries to be the balance between Madeline's passive and Juliette's fire. When not arguing with Juliette, Julian handles the logistics and research.</p>
+        description:<p>Eager, Idealistic, and a wee bit Cowardly. Julian tries to be the balance between Madeline's passive and Juliette's fire. When not arguing with Juliette, Julian handles the logistics and research.</p>,
+        link:`heroine-rises/julian-gaitan`
       },
       /*{
         name:"More...",
         image:Others,
-        description:<p>From the fiery NSPD Officer in Maxine Rubin to the high riding businessman in Robert Silva - discover all you wanted to know about other characters in Heroine Rises!</p>
+        description:<p>From the fiery NSPD Officer in Maxine Rubin to the high riding businessman in Robert Silva - discover all you wanted to know about other characters in Heroine Rises!</p>,
+        link:`heroine-rises-list`
       }*/
     ]
 
@@ -126,6 +130,7 @@ class Hub extends Component {
                 characterData.map(character => {
                   return(
                     <WikiItem
+                    link={character.link}
                     image={character.image}
                     title={character.name}
                     description={character.description}

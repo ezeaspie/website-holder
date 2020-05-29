@@ -25,6 +25,11 @@ During some point, Ada appears to have cared for babies and children<sup><a href
 
 ##Personality
 
+<div class="wiki-char-section-image">
+<img src="../images/wiki/ada1.jpg" alt="Ada Lima Tea Reaction"></img>
+<figcaption>Ada's passion for tea</figcaption>
+</div>
+
 Ada can be described as very sociable and friendly. She loves attending to guests and meeting new people and appears to see the good in almost everyone she meets. This is evident when Irene Lassiter mentions that Ada was the only person who looked past her criminal past and apperance to give her a well-paying job as a housekeeper.
 
 Ada has a very talkative nature. She loves to spend time discussing everything and anything that comes to mind. She very often reveals personal or trusted information to others - even if they are complete strangers.
@@ -33,4 +38,6 @@ Ada spends her time maintaining the house and enjoys small social gatherings wit
 
 ##Appearance
 
-Ada has olive colored skin and has an average build.
+Ada has olive colored skin and has an average build. She has dark brown hair that she typically ties into a bun at the back of her head. Ada stands at 5 foot 10 inches.
+
+Ada is fond of dresses and usually wears them when strolling around the city or when in her home. According to Robert, Ada has a massive collection of dresses and rarely wears the same one twice. 

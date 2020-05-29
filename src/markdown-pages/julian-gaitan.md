@@ -2,7 +2,7 @@
 path: "/heroine-rises/julian-gaitan"
 date: "2020-04-08"
 title: "Julian Gaitan"
-mainImg: '../images/site/Julian0.jpg'
+mainImg: '../images/wiki/julian0.jpg'
 ---
 <div class="char-quote">
 <blockquote>

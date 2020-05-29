@@ -2,7 +2,7 @@
 path: "/heroine-rises/clarissa-harbour"
 date: "2020-04-10"
 title: "Clarissa Harbour"
-mainImg: '../images/wiki/juliette0.jpg'
+mainImg: '../images/wiki/clarissa1.jpg'
 ---
 <div class="char-quote">
 <blockquote>
