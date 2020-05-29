@@ -3,13 +3,9 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import SEO from '../components/seo';
 import Img from "gatsby-image"
-import RadarChart from "../components/radarChart";
 import Background from '../images/site/wikiBackground.jpg';
-import WikiNav from '../components/wiki-nav';
 
-export default function Template({
-  data, pageContext // this prop will be injected by the GraphQL query below.
-}) {
+export default ({data, pageContext}) => {
   const charInfo = pageContext; // Holds all stats and other data. Images?
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
@@ -32,7 +28,6 @@ export default function Template({
         <li><div className="info-left">Eye Color</div><div className="info-right">{charInfo.physical.eye}</div></li>
         <li><div className="info-left">Hair Color</div><div className="info-right">{charInfo.physical.hair}</div></li>
         <li className="radar-section">
-          <RadarChart stats={charInfo.stats} color={charInfo.physical.color}/>
         </li>
         </ul>
       </div>
@@ -43,13 +38,12 @@ export default function Template({
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
-    <WikiNav/>
     </div>
     </div>
     </Layout>
   )
 }
-export const pageQuery = graphql`
+export const query = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
