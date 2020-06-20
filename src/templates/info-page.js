@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import SEO from '../components/seo';
 import Img from "gatsby-image"
 import Background from '../images/site/wikiBackground.jpg';
+import RadarChartStats from '../components/radarChartStats';
 
 export default ({data, pageContext}) => {
   const charInfo = pageContext; // Holds all stats and other data. Images?
@@ -28,6 +29,7 @@ export default ({data, pageContext}) => {
         <li><div className="info-left">Eye Color</div><div className="info-right">{charInfo.physical.eye}</div></li>
         <li><div className="info-left">Hair Color</div><div className="info-right">{charInfo.physical.hair}</div></li>
         <li className="radar-section">
+          <RadarChartStats stats={charInfo.stats} color={charInfo.physical.color}/>
         </li>
         </ul>
       </div>
