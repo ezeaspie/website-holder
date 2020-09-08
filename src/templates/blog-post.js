@@ -4,10 +4,18 @@ import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from '../components/seo';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import {BLOCKS} from "@contentful/rich-text-types"
 import moment from 'moment';
 
 
 export default ({ data }) => {  
+  const options = {
+    renderNode:{
+      [BLOCKS.EMBEDDED_ASSET]: (node,children)=>(
+        <img className="blog-image" src={node.data.target.fields.file["en-US"].url}/>
+      )
+    }
+  }
   const post = data.contentfulBlogPost;
     return (
     <Layout>
@@ -18,7 +26,7 @@ export default ({ data }) => {
           <h1>{post.title}</h1>
           <h2 className="blog-date">{moment(post.publishDate).format('MMMM DD YYYY')}</h2>
           <div  className="blog-main-content">
-          {documentToReactComponents(post.childContentfulBlogPostContentRichTextNode.json)}
+          {documentToReactComponents(post.childContentfulBlogPostContentRichTextNode.json,options)}
           </div>
           <Link to="/blog">Return to Blog Index</Link> 
           </div>      
