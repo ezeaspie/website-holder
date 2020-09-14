@@ -134,7 +134,7 @@ class Reader extends Component {
                 </div>
                 <h5 style={{textAlign:"center"}}>Page {chapterInfo.currentPage+1}</h5>
                 <ul className="support-links">
-                    <li><a href="https://www.instagram.com/ezequiel_espinoza_art/"><img src={Instagram} alt="instagram-logo"></img>Follow Me on Instagram!</a></li>
+                    <li><a href="https://www.instagram.com/ezespinozart/"><img src={Instagram} alt="instagram-logo"></img>Follow Me on Instagram!</a></li>
                 </ul>
             </div>
         )

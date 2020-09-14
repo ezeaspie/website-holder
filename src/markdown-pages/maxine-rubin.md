@@ -27,4 +27,4 @@ As Maxine's influence within the NSPD grows, so does opposition. Maxine's effort
 
 ##Personality
 
-Maxine is often times very hostile and snappy with people who get in the way of her goals. 
+Maxine is often times very hostile and snappy with people who get in the way of her goals.

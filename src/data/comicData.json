@@ -107,7 +107,14 @@
     {
         "comicId":1,
         "chapter":3,
-        "pages": 4,
+        "pages":13,
+        "title":"Small Time Detective - Remastered",
+        "description":"On the Island city of Northern Serenity - local superstar detective prepares to confront her latest suspect during the last day of school!"
+    },
+    {
+        "comicId":1,
+        "chapter":4,
+        "pages": 5,
         "title": "The Art of Heroine Rises",
         "description": "An archival project meant to catalog the various concepts and sketches of characters, settings, and objects from 'Heroine Rises'."
     }

@@ -42,13 +42,13 @@ const Layout = ({ children }) => (
             </ul>
             <ul className="footer-contact">
                 <li className="footer-title">Contact</li>
-                <li><a href="https://www.instagram.com/ezequiel_espinoza_art/"><b>Instagram</b></a></li>
+                <li><a href="https://www.instagram.com/ezespinozart/"><b>Instagram</b></a></li>
                 <li><b>Email</b> - ezequielnoza@gmail.com</li>
                 <li><a href="https://www.deviantart.com/ezeaspie"><b>DeviantArt</b></a></li>
             </ul>
             </div>
             <div className="copyright">
-            <small>© 2019, Built with Gatsby by Ezequiel Espinoza Diaz</small>
+            <small>© 2020, Built by Ezequiel Espinoza Diaz</small>
             </div>
           </footer>
         </div>
