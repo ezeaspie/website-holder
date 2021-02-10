@@ -2,9 +2,9 @@
     {
     "comicId":0,
     "chapter":0,
-    "pages":12,
+    "pages":25,
     "title":"Small Time Detective",
-    "description":"Madeline Harbour confronts a high-school answer sheet thief in her pursuit of the greater good."
+    "description":"Madeline Harbour confronts an answer sheet thief in her pursuit of the 'greater good'."
     },
     {
         "comicId":0,
@@ -107,15 +107,22 @@
     {
         "comicId":1,
         "chapter":3,
-        "pages":25,
-        "title":"Small Time Detective - Remastered",
-        "description":"On the Island city of Northern Serenity - local superstar detective prepares to confront her latest suspect during the last day of school!"
+        "pages":5,
+        "title":"The Art of Heroine Rises",
+        "description":"An archival project meant to catalog the various concepts and sketches of characters, settings, and objects from the world of 'Heroine Rises'."
     },
     {
         "comicId":1,
         "chapter":4,
-        "pages": 5,
-        "title": "The Art of Heroine Rises",
-        "description": "An archival project meant to catalog the various concepts and sketches of characters, settings, and objects from 'Heroine Rises'."
+        "pages": 12,
+        "title": "Small-Time Detective - Original",
+        "description": "The original art for the first chapter of Heroine Rises. Originally released in December 2018."
+    },
+    {
+        "comicId":1,
+        "chapter":5,
+        "pages":10,
+        "title": "To Become a Heroine - Remaster",
+        "description": "Julian Gaitan talks to Madeline about taking their detective hobby to another level before facing off against an old advesary."
     }
 ]
