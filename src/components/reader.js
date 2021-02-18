@@ -12,20 +12,21 @@ class Reader extends Component {
             isPageDropdown:false,
             isFinalPage: false,
             hasNextChapter:true,
+            classicView:true,
         }
     }
 
     componentDidMount(){
         let chapterInfo = this.props.chapterInfo;
 
+        let latestChapter = chapterInfo.comicData[0].chapter;
+        let currentChapter = chapterInfo.chapterId;
+        if(latestChapter === currentChapter){
+            this.setState({hasNextChapter:false});
+        }
+
         if(chapterInfo.currentPage + 1 >= chapterInfo.chapterPages){
-            this.setState({isFinalPage:true},()=>{
-                let latestChapter = chapterInfo.comicData[0].chapter;
-                let currentChapter = chapterInfo.chapterId;
-                if(latestChapter === currentChapter){
-                    this.setState({hasNextChapter:false});
-                }
-            });
+            this.setState({isFinalPage:true});
         }
     }
 
@@ -36,7 +37,24 @@ class Reader extends Component {
 
         let imageSource = `/comics/${chapterInfo.comicId}/${chapterInfo.chapterId}/${chapterInfo.currentPage}.jpg`;
 
+        let imageCollection = [];
+        
+        for(let i = 0 ; i<chapterInfo.chapterPages; i++){
+            let altText = `${chapterInfo.comicName} Chapter ${chapterInfo.chapterId+1} Page ${i+1}`
+            if(chapterInfo.currentPage === 0){
+                altText = `${chapterInfo.comicName} Chapter ${chapterInfo.chapterId+1} Cover`
+            }
+            let source = `/comics/${chapterInfo.comicId}/${chapterInfo.chapterId}/${i}.jpg`;
+
+            imageCollection.push(
+                <img alt={altText} src={withPrefix(source)} style={{width:'100%', maxWidth:'920px'}}/>
+            ); 
+         }
+
+         console.log(imageCollection);
+
         let link = `/${comicName}/${chapterInfo.chapterId}/${chapterInfo.currentPage+1}`;
+
 
         let imgAlt = `${chapterInfo.comicName} Chapter ${chapterInfo.chapterId+1} Page ${chapterInfo.currentPage+1}`
 
@@ -71,6 +89,7 @@ class Reader extends Component {
             </li>
             </Link>); 
          }
+         
 
         return (
             <div className="reader">
@@ -128,13 +147,36 @@ class Reader extends Component {
                     <h5 className="reader-comic-title">{chapterInfo.comicName}</h5>
                 </div>
                 <div className="reader-image">
-                    <Link to={link}>
-                        <img alt={imgAlt} src={withPrefix(imageSource)} style={{width:'100%', maxWidth:'920px'}}/>
-                    </Link>
+                    {
+                        this.state.classicView?
+                        <Link to={link}>
+                            <img alt={imgAlt} src={withPrefix(imageSource)} style={{width:'100%', maxWidth:'920px'}}/>
+                        </Link>:
+                        <ul className="reader-image-list">
+                            {
+                              imageCollection.map((image)=>{
+                                  return image;
+                              })  
+                            }
+                        </ul>
+                    }
+                    
                 </div>
-                <h5 style={{textAlign:"center"}}>Page {chapterInfo.currentPage+1}</h5>
+                {
+                    this.state.classicView?
+                    <h5 style={{textAlign:"center"}}>Page {chapterInfo.currentPage+1}</h5>
+                    :
+                    <a 
+                    className="modern-reader-next"
+                    href={this.state.hasNextChapter?`/${comicName}/${chapterInfo.chapterId+1}/${0}`:`/${comicName}/`}>
+                        <h5 style={{textAlign:'center'}}>
+                            {this.state.hasNextChapter?'Next Chapter':`${chapterInfo.comicName} Overview`}
+                            </h5></a>
+                }
+                
                 <ul className="support-links">
-                    <li><a href="https://www.instagram.com/ezespinozart/"><img src={Instagram} alt="instagram-logo"></img>Follow Me on Instagram!</a></li>
+                    <li><button className="reader-toggle btn" onClick={()=>{this.setState({classicView:!this.state.classicView})}}>Change View</button></li>
+                    <li><a className="btn" href="https://www.instagram.com/ezespinozart/">Follow Me on Instagram!</a></li>
                 </ul>
             </div>
         )
