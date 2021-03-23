@@ -9,9 +9,9 @@
     {
         "comicId":0,
         "chapter":1,
-        "pages":12,
+        "pages":22,
         "title":"To Become a Heroine",
-        "description":"Madeline and her friend Julian Gaitan discuss Madeline's dreams of becoming a heroine but come face to face with the dangers of Northern Serenity"
+        "description":"Julian Gaitan talks to Madeline about taking their detective hobby to another level before facing off against an old advesary."
     },
     {
         "comicId":0,
@@ -121,8 +121,8 @@
     {
         "comicId":1,
         "chapter":5,
-        "pages":10,
-        "title": "To Become a Heroine - Remaster",
-        "description": "Julian Gaitan talks to Madeline about taking their detective hobby to another level before facing off against an old advesary."
+        "pages":12,
+        "title": "To Become a Heroine - Original",
+        "description": "Madeline and her friend Julian Gaitan discuss Madeline's dreams of becoming a heroine but come face to face with the dangers of Northern Serenity. Original Release January 2019."
     }
 ]
