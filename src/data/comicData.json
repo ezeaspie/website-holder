@@ -124,5 +124,12 @@
         "pages":12,
         "title": "To Become a Heroine - Original",
         "description": "Madeline and her friend Julian Gaitan discuss Madeline's dreams of becoming a heroine but come face to face with the dangers of Northern Serenity. Original Release January 2019."
+    },
+    {
+        "comicId":1,
+        "chapter":6,
+        "pages": 9,
+        "title": "Sassy Steel - Remaster",
+        "description": "Madeline treks through the Isle of Tranquility nieghborhood to meet up with the bold and sassy Juliette Sandover."
     }
 ]
