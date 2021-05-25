@@ -16,9 +16,9 @@
     {
         "comicId":0,
         "chapter":2,
-        "pages":13,
-        "title":"Sassy Steel",
-        "description":"Madeline meets up with the sassy and tough Juliette Sandover, who needs some convincing to join Madeline's cause."
+        "pages": 17,
+        "title": "Sassy Steel",
+        "description": "Madeline treks through the Isle of Tranquility nieghborhood to meet up with the bold and sassy Juliette Sandover."
     },
     {
         "comicId":0,
@@ -128,8 +128,8 @@
     {
         "comicId":1,
         "chapter":6,
-        "pages": 9,
-        "title": "Sassy Steel - Remaster",
-        "description": "Madeline treks through the Isle of Tranquility nieghborhood to meet up with the bold and sassy Juliette Sandover."
+        "pages":13,
+        "title":"Sassy Steel - Original",
+        "description":"Madeline meets up with the sassy and tough Juliette Sandover, who needs some convincing to join Madeline's cause. Original Release February 2019."
     }
 ]
