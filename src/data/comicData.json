@@ -23,9 +23,9 @@
     {
         "comicId":0,
         "chapter":3,
-        "pages":13,
+        "pages":15,
         "title":"Mother's Concerns",
-        "description":"Clarissa Harbour and her daughter Madeline are best friends - but constantly are at ends. Madeline tries to convince her mother to help - even if that means opening up old wounds."
+        "description":"Madeline confronts her mother, who is still reeling from a devastating loss some fifteen years ago."
     },
     {
         "comicId":0,
@@ -131,5 +131,12 @@
         "pages":13,
         "title":"Sassy Steel - Original",
         "description":"Madeline meets up with the sassy and tough Juliette Sandover, who needs some convincing to join Madeline's cause. Original Release February 2019."
+    },
+    {
+        "comicId":1,
+        "chapter":7,
+        "pages":13,
+        "title":"Mother's Concerns - Original",
+        "description":"Clarissa Harbour and her daughter Madeline are best friends - but constantly are at ends. Madeline tries to convince her mother to help - even if that means opening up old wounds."
     }
 ]
