@@ -2105,6 +2105,14 @@ background: rgb(237, 234, 229, .8);
   padding: 1rem;
 }
 
+.char-info h2{
+  text-decoration: underline 2px #000;
+}
+
+.char-info h4{
+  margin-bottom: .5rem;
+}
+
 .char-quote{
   font-family: Calibri;
   margin: 1rem;
@@ -2126,9 +2134,17 @@ background: rgb(237, 234, 229, .8);
 }
 
 .wiki-char-section-image{
-    width: 200px;
+    width: 220px;
     float:left;
     margin-right:1rem;
+    border:solid 1px #c3baa9;
+    padding:.25rem;
+    background: #e7e1d5;
+}
+
+.wiki-img-right{
+  float:right;
+  margin-left:1rem;
 }
 
 .wiki-char-section-image figcaption{
@@ -2311,7 +2327,7 @@ background: rgb(237, 234, 229, .8);
   .char-info{
     overflow: auto;
     margin: 1rem;
-    max-width:1100px;
+    max-width:1250px;
     margin: 0 auto;
 }
 

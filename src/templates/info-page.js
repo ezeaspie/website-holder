@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import SEO from '../components/seo';
 import Img from "gatsby-image"
-import Background from '../images/site/wikiBackground.jpg';
+import Background from '../images/site/wikiBackgroundNew.jpg';
 import RadarChartStats from '../components/radarChartStats';
 
 export default ({data, pageContext}) => {

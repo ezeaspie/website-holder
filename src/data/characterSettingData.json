@@ -6,13 +6,13 @@
       "chr": 8.5,
       "agi": 8,
       "ldr": 7,
-      "end": 3,
+      "end": 5,
       "int": 8.5
     },
     "physical":{
       "name": "Madeline Lindsay Harbour",
       "heightFt": 5,
-      "heightIn":6,
+      "heightIn":7,
       "eye": "Blue",
       "hair": "Blonde",
       "birthPlace":"Isle of Tranquility",
@@ -34,7 +34,7 @@
     "physical":{
       "name": "Juliette Anais Sandover",
       "heightFt": 5,
-      "heightIn":6,
+      "heightIn":7,
       "eye": "Brown",
       "hair": "Brown",
       "birthPlace":"Isle of Tranquility",
@@ -56,7 +56,7 @@
     "physical":{
       "name": "Julian Gaitan Garcia",
       "heightFt": 5,
-      "heightIn":7,
+      "heightIn":9,
       "eye": "Dark Brown",
       "hair": "Brown",
       "birthPlace":"La Noria",
@@ -78,7 +78,7 @@
     "physical":{
       "name": "Maxine Amelia Rubin",
       "heightFt": 5,
-      "heightIn":4,
+      "heightIn":6,
       "eye": "Light Brown",
       "hair": "Strawberry Blonde (dyed Red)",
       "birthPlace":"Chantilly",
@@ -100,7 +100,7 @@
     "physical":{
       "name": "Clarissa Lane Harbour",
       "heightFt": 5,
-      "heightIn":8,
+      "heightIn":9,
       "eye": "Blue",
       "hair": "Platinum Blonde",
       "birthPlace":"New Serenity",
@@ -125,7 +125,7 @@
       "heightIn":10,
       "eye": "Brown",
       "hair": "Dark Brown",
-      "birthPlace":"Paradise, Southern Serenity",
+      "birthPlace":"Order",
       "birthday": "Febuary 23rd",
       "age":38,
       "color":"310a73"
@@ -166,7 +166,7 @@
     "physical":{
       "name": "Irene Lassiter",
       "heightFt": 5,
-      "heightIn":9,
+      "heightIn":10,
       "eye": "Brown",
       "hair": "Black",
       "birthPlace":"Serenity Heights",
