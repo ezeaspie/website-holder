@@ -1,6 +1,6 @@
-import heroineRisesImage from '../images/site/hr.jpg';
-//CONVERT PNG TO JPG 
-import SweetWaterImage from '../images/site/sw.jpg';
+import heroineRisesImage from '../images/site/heroineRisesThumbnail.jpg';
+import SweetWaterImage from '../images/site/oneShotsThumbnail.jpg';
+
 import OneShotCover from '../images/site/OneShotsCover.jpg'
 import heroineRisesCoverImage from '../images/site/HeroineRisesCover.jpg';
 
