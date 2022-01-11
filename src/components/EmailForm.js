@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import EmailSuccessPopUp from '../components/EmailSuccessPopup';
 
+//Removed in JAN 2021 from Website
+//If needed: Add in LAYOUT component before FOOTER
+
 const EmailForm = () => {
 
   const [email, setEmail] = useState('');

@@ -176,7 +176,7 @@ class Reader extends Component {
                 
                 <ul className="support-links">
                     <li><button className="reader-toggle btn" onClick={()=>{this.setState({classicView:!this.state.classicView})}}>Change View</button></li>
-                    <li><a className="btn" href="https://www.instagram.com/ezespinozart/">Follow Me on Instagram!</a></li>
+                    <li><a className="btn" href="https://www.instagram.com/ezeas123/">Follow Me on Instagram!</a></li>
                 </ul>
             </div>
         )

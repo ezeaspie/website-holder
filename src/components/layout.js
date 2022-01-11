@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql , Link} from 'gatsby'
-import EmailForm from '../components/EmailForm';
-
 import Header from './header'
 import './layout.css'
+
+let igLink = `https://www.instagram.com/ezeas123/`;
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,7 +29,6 @@ const Layout = ({ children }) => (
         >
           {children}
           <footer>
-           <EmailForm /> 
             <div className="footer-main">
             <ul className="footer-nav">
               <li className="footer-title">Navigation</li>
@@ -42,13 +41,13 @@ const Layout = ({ children }) => (
             </ul>
             <ul className="footer-contact">
                 <li className="footer-title">Contact</li>
-                <li><a href="https://www.instagram.com/ezespinozart/"><b>Instagram</b></a></li>
-                <li><b>Email</b> - ezequielnoza@gmail.com</li>
+                <li><a href={igLink}><b>Instagram</b></a></li>
+                <li><a href='https://www.artstation.com/ezequiele'><b>ArtStation</b></a></li>
                 <li><a href="https://www.deviantart.com/ezeaspie"><b>DeviantArt</b></a></li>
             </ul>
             </div>
             <div className="copyright">
-            <small>© 2020, Built by Ezequiel Espinoza Diaz</small>
+            <small>© 2021, Built by Ezequiel Espinoza Diaz</small>
             </div>
           </footer>
         </div>
