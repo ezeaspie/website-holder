@@ -47,7 +47,7 @@ const Layout = ({ children }) => (
             </ul>
             </div>
             <div className="copyright">
-            <small>© 2021, Built by Ezequiel Espinoza Diaz</small>
+            <small>© 2022, Built by Ezequiel Espinoza Diaz</small>
             </div>
           </footer>
         </div>

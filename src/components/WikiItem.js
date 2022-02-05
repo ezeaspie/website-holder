@@ -19,7 +19,7 @@ class WikiItem extends Component {
           {this.props.description}
           <Link to={this.props.link}>
             <button className="btn btn-call-to-action">
-            Read Now!
+            Learn More!
             </button>
           </Link>
         </div>

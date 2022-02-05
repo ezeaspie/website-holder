@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 
-//Move State into it's own side compnent so the entire fucking gallery doesn't re-render.
+//Move State into it's own side compnent so the entire gallery doesn't re-render.
 class Gallery extends Component {
   constructor(props){
     super(props);
@@ -20,7 +20,7 @@ class Gallery extends Component {
 
   sortData = (category) => {
 
-    const shuffle = (array) => {
+    /*const shuffle = (array) => {
       for (var i = array.length-1; i >=0; i--) {
        
           var randomIndex = Math.floor(Math.random()*(i+1)); 
@@ -30,13 +30,13 @@ class Gallery extends Component {
           array[i] = itemAtIndex;
       }
       return array;
-    }
+    }*/
 
 
     const data = this.props.data.allContentfulGalleryItem;
     const sorted = [];
     let galleryItemData = data.edges;
-    galleryItemData = shuffle(galleryItemData);
+    //galleryItemData = shuffle(galleryItemData);
     let filteredData = galleryItemData.filter(({node}) => {
       return node.category === category;
     })
@@ -45,14 +45,14 @@ class Gallery extends Component {
 
     filteredData.map(({node},i) =>{
       node.id = i;
-      if(node.featured){
-        sorted.unshift(node);
-      }
-      else{
-        sorted.push(node);
-      }
+      node.creationDate = new Date(node.creationDate);
+      console.log(node.creationDate);
+      sorted.push(node);
       return node;
     })
+
+    sorted.sort((a,b)=> b.creationDate - a.creationDate);
+
     return sorted;
   }
 
@@ -103,6 +103,7 @@ class Gallery extends Component {
       <li 
       onClick= { ()=>this.setState({sortedData: this.sortData(0)})}>Main</li>
       <li onClick = {()=>this.setState({sortedData: this.sortData(1)})}>Heroine Rises Covers</li>
+      <li onClick = {()=>this.setState({sortedData: this.sortData(2)})}>Sketchbook</li>
     </ul>
 
     <div className="gallery">

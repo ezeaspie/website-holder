@@ -69,7 +69,7 @@ class Hub extends Component {
       {
         name: "Madeline Harbour",
         image: Madeline,
-        description:<p>Rich, Ambitious, but Naive. Madeline is the leader of her detective group and dreams of being a heroine. Her physical weakness is mitigated by her quick thinking and empathy.</p>,
+        description:<p>Rich, Ambitious, Naive. Madeline is the leader of her detective group and dreams of being a heroine. Her physical weakness is mitigated by her quick thinking and empathy.</p>,
         link: `heroine-rises/madeline-harbour`
       },
       {
@@ -117,7 +117,10 @@ class Hub extends Component {
 
             </div>
             <div className={this.state.introHidden?"intro-tagline-hidden":"intro-tagline"}>
-              <h3>On the island city of Northern Serenity, gangs rule the history scarred streets and citizens fight for survival... that is, unless you're Madeline Harbour and live in the comfort of the Eastern Island. From the outside looking in, Madeline longs to ease the city's divisions by doing what she does best - solving mysteries. However, her desire of becoming a Heroine the city can look up to puts her in the face of the city's rampant corruption, powerful crime lords, mysterious and mystical artifacts, and shadowy figures bent on stopping her. Madeline realizes that her luxorious upbringing has not prepared her for the quest - but so long as she has her friends - that coveted 'heroic' status is still within reach.</h3>
+            <h3>On the island city of Northern Serenity, criminal gangs rule the scarred streets while citizens fight for survival... unless you're Madeline Harbour and live in the comfort of the Eastern Island! From the outside looking in, Madeline longs to ease the city's divisions by doing what she does best - solving mysteries.</h3>
+            <p>Starting off small, Madeline takes on bigger cases in the hopes that she can solve the biggest mystery of her life: The disappearance of her father Jacques some 15 years ago. Vanishing under mysterious circumstances and pursing a goal he kept secret from everyone, Madeline hopes to discover the truth about what happened and finally heal the emotional pain in her mother’s heart.</p>
+            <p>Madeline’s desire to become a heroine the city can look up to pits her against hardened criminals, corrupt police officers, power hungry politicians, and sadistic crime lords. Madeline’s pursuit of Jacques lands her in front of mysterious and mystical artifacts and the shadowy figures bent on protecting their secrets. Madeline quickly realizes that her luxurious upbringing has not prepared her for the quest - but so long as she has her friends - that coveted 'heroic' status will always be within reach.</p>
+
               <p>Story and Art by Ezequiel Espinoza Diaz, created December 2018</p>
             </div>
           </div>

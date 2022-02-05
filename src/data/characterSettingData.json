@@ -12,7 +12,7 @@
     "physical":{
       "name": "Madeline Lindsay Harbour",
       "heightFt": 5,
-      "heightIn":7,
+      "heightIn":9,
       "eye": "Blue",
       "hair": "Blonde",
       "birthPlace":"Isle of Tranquility",
@@ -34,7 +34,7 @@
     "physical":{
       "name": "Juliette Anais Sandover",
       "heightFt": 5,
-      "heightIn":7,
+      "heightIn":10,
       "eye": "Brown",
       "hair": "Brown",
       "birthPlace":"Isle of Tranquility",
@@ -56,7 +56,7 @@
     "physical":{
       "name": "Julian Gaitan Garcia",
       "heightFt": 5,
-      "heightIn":9,
+      "heightIn":11,
       "eye": "Dark Brown",
       "hair": "Brown",
       "birthPlace":"La Noria",
@@ -78,7 +78,7 @@
     "physical":{
       "name": "Maxine Amelia Rubin",
       "heightFt": 5,
-      "heightIn":6,
+      "heightIn":7,
       "eye": "Light Brown",
       "hair": "Strawberry Blonde (dyed Red)",
       "birthPlace":"Chantilly",
@@ -90,7 +90,7 @@
   {
     "url":"clarissa-harbour",
     "stats":{
-      "str": 3,
+      "str": 4,
       "chr": 6,
       "agi": 7,
       "ldr": 7,
@@ -100,7 +100,7 @@
     "physical":{
       "name": "Clarissa Lane Harbour",
       "heightFt": 5,
-      "heightIn":9,
+      "heightIn":11,
       "eye": "Blue",
       "hair": "Platinum Blonde",
       "birthPlace":"New Serenity",
@@ -113,16 +113,16 @@
     "url":"ada-lima",
     "stats":{
       "str": 5,
-      "chr": 8,
-      "agi": 2,
-      "ldr": 4,
+      "chr": 10,
+      "agi": 4,
+      "ldr": 3,
       "end": 5,
       "int": 6
     },
     "physical":{
       "name": "Ada Asier de Santos Lima Silva",
-      "heightFt": 5,
-      "heightIn":10,
+      "heightFt": 6,
+      "heightIn":0,
       "eye": "Brown",
       "hair": "Dark Brown",
       "birthPlace":"Order",
@@ -135,7 +135,7 @@
     "url":"maeve-colbrun",
     "stats":{
       "str": 5,
-      "chr": 7,
+      "chr": 7.5,
       "agi": 7,
       "ldr": 5,
       "end": 6,
@@ -156,7 +156,7 @@
   {
     "url":"irene-lassiter",
     "stats":{
-      "str": 8,
+      "str": 8.5,
       "chr": 2.5,
       "agi": 8,
       "ldr": 6,
@@ -166,7 +166,7 @@
     "physical":{
       "name": "Irene Lassiter",
       "heightFt": 5,
-      "heightIn":10,
+      "heightIn":11,
       "eye": "Brown",
       "hair": "Black",
       "birthPlace":"Serenity Heights",
