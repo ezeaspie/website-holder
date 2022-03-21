@@ -968,6 +968,65 @@ pre tt:after {
 .container {
   padding:1em;
 }
+
+.mainCharacters, .supportCharacters{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin:0;
+}
+
+.mainCharacterCard{
+  margin:1rem;
+  align-self: stretch;
+}
+
+.mainCharacterCard img{
+  margin-bottom: .5rem;
+  width:100%;
+}
+
+.mainCharacterCard a, .supportCharacters a{
+  color:#000;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  padding:0;
+  margin:0;
+  color:inherit;
+}
+
+.supportCharacters{
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.supportCharacters a{
+  text-align: left;
+}
+
+.supportCharacterCard{
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 40%;
+}
+
+.supportCharacterColor{
+  height:inherit;
+  width:10%;
+  border:solid 1px #000;
+}
+
+.wikiNavContainer{
+  max-width: 1200px;
+  margin:1rem auto;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

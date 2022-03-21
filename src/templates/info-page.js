@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import Img from "gatsby-image"
 import Background from '../images/site/wikiBackgroundNew.jpg';
 import RadarChartStats from '../components/radarChartStats';
+import WikiNav from "../components/wiki-nav";
 
 export default ({data, pageContext}) => {
   const charInfo = pageContext; // Holds all stats and other data. Images?
@@ -40,6 +41,7 @@ export default ({data, pageContext}) => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
+      <WikiNav/>
     </div>
     </div>
     </Layout>

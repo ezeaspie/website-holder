@@ -23,7 +23,7 @@ Ada is the youngest of her siblings and is the twin sister of Alfonso Lima. Ada 
 
 During some point, Ada appears to have cared for babies and children<sup><a href="https://www.ezequielespinoza.com/heroine-rises/4/5">[3]</a></sup>
 
-##Personality
+##Personality and Traits
 
 Ada can be described as very sociable and friendly. She loves attending to guests and meeting new people and appears to see the good in almost everyone she meets. This is evident when Irene Lassiter mentions that Ada was the only person who looked past her criminal past and apperance to give her a well-paying job as a housekeeper.
 
@@ -34,3 +34,23 @@ Ada spends her time maintaining the house and enjoys small social gatherings wit
 ##Appearance
 
 Ada has olive colored skin and has an average build.
+
+##Biography
+
+###Young Adulthood
+
+####NSPD-Revolucion War
+
+####Rise of 'La Faccion'
+
+####Reformed Woman
+
+####Maeve and Motherhood
+
+###The Ring of Deceit
+
+####Hunt for Irene
+
+####Chasing Shadows
+
+####Woman of the Hour

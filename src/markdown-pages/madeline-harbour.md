@@ -77,7 +77,7 @@ Being born in October, Clarissa would always dress Madeline in orange - a habit 
 When Madeline was 4, her father Jacques began to isolate himself from the family which led to Madeline becoming uneasy and sad. Shortly after, Jacques went missing with his final known location being the island of Glacier Point.
 After Jacques vanished, Clarissa Harbour ventured out with Madeline to Glacier Point to conduct her own investigation at Glacier Point, tracking down Jacques’s path to Onyx Peak. Not willing to risk her daughter’s life, Clarissa opted to abandon the investigation and raise Madeline alone in the safety of their Isle home. From here forward, Madeline’s adventurous spirit clashed with Clarissa’s resistance to take risks.
 
-####’Brave Naivete’
+####'Brave Naivete'
 
 Tired of seeing her mother depressed over the loss of Jacques, Madeline vowed to find Jacques when she grew older. Thanks to Madeline’s optimism, Clarissa was at least able to function and live life in relative stability with her daughter. Eventually, Clarissa would allow Madeline to participate in team sports like soccer. However, after Madeline was hurt, Clarissa pulled Madeline from the team and placed her in a gymnastics program. Here, Madeline excelled and continued to do so until she got hurt on the floor and Clarissa pulled her from all sports.
 
