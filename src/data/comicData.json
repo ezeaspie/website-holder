@@ -159,5 +159,12 @@
         "pages": 7,
         "title":"Isolated Fears",
         "description":"Juliette runs into Maxine Rubin on her day off, which makes Maxine more uncomfortable than she was before."
+    },
+    {
+        "comicId":2,
+        "chapter":0,
+        "pages": 16,
+        "title":"Kindling",
+        "description":"Maxine Rubin and Damien Schmidt take a mid-tier criminal in Yuri Maximillian and try to uncover why this random criminal has access to vast resources."
     }
 ]

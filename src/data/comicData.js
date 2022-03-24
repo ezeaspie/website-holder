@@ -1,8 +1,11 @@
 import heroineRisesImage from '../images/site/heroineRisesThumbnail.jpg';
 import SweetWaterImage from '../images/site/oneShotsThumbnail.jpg';
 
-import OneShotCover from '../images/site/OneShotsCover.jpg'
+import OneShotCover from '../images/site/OneShotsCover.jpg';
 import heroineRisesCoverImage from '../images/site/HeroineRisesCover.jpg';
+
+import FireStarterCover from '../images/site/FireStarterCover.jpg';
+import FireStarterThumbnail from '../images/site/FireStarterThumbnail.jpg';
 
 
 import React from 'react';
@@ -34,6 +37,20 @@ let comicData = [
         <p>Every once in a while I make a comic that has nothing to do with any other series or places characters from other series in non-canon context. Or I just make some for fun or practice. Either way, those comics end up here: regular non-serialized standalone comics.</p>
       </div>,
       excerpt: "Regular standalone comics that don't fall into another category.",
+    },
+    {
+      title:"FireStarter",
+      id:2,
+      url:"firestarter",
+      image: FireStarterThumbnail,
+      coverImage: FireStarterCover,
+      showImages: true,
+      synopsis:
+      <div>
+        <p><i>FireStarter</i> tells the story of Maxine Rubin, a young police officer who's personal vendetta against the criminals of Northern Serenity has led her to shake up the delicate 'false peace' between the NSPD and the gangs despite the consequences.</p>
+        <p>Maxine's efforts to uphold the NSPD Motto: "For Justice and the Greater Good" put her in direct conflict with the savage criminal gang known as the Rust Bandits and the corrupt beauracracy of the NSPD and Serenity Government. When a high ranking criminal snatches a young girl from her mother, Maxine and her partner Damien Schmidt defy the wishes of the Government and decide to bring the girl back - even if it means being the spark that starts a full-scale armed conflict between the Rust Bandits and the NSPD.</p>
+        </div>,
+      excerpt: "Maxine Rubin and Damien Schmidt take on the Rust Bandits in the pursuit of Justice and the Greater Good."
     }
   ]
 export default comicData;

@@ -20,12 +20,14 @@ exports.createPages = ({ graphql, actions }) => {
     comicData.forEach(( chapter ) => {
       const comicNames = [
         "Heroine Rises",
-        "One Shots"
+        "One Shots",
+        "FireStarter"
       ]
   
       const comicNameURL = [
         "heroine-rises",
-        "one-shots"
+        "one-shots",
+        "firestarter"
       ]
   
       let chapterTitle = chapter.title;
@@ -76,6 +78,10 @@ exports.createPages = ({ graphql, actions }) => {
         return dataObj.comicId === 1;
       })
 
+      let fireStarterFiltered = comicData.filter((dataObj)=> {
+        return dataObj.comicId === 2;
+      })
+
       createPage({
         path: `heroine-rises`,
         component:path.resolve(`./src/templates/comic-overview.js`),
@@ -92,6 +98,15 @@ exports.createPages = ({ graphql, actions }) => {
           comicData:oneShotsFiltered,
           comicId:1,
           comicTitle:"One Shots"
+        }
+      })
+      createPage({
+        path:'firestarter',
+        component:path.resolve(`./src/templates/comic-overview.js`),
+        context:{
+          comicData:fireStarterFiltered,
+          comicId:2,
+          comicTitle:"FireStarter"
         }
       })
 
