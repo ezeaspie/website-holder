@@ -44,9 +44,9 @@
     {
         "comicId":0,
         "chapter":6,
-        "pages":21,
+        "pages":19,
         "title":"The Daughter of the NSPD",
-        "description":"In an effort to expand what little evidence and information she has to try to solve the case, Madeline sends Juliette and Julian to the NSPD to get help but a fiery figure in Maxine Rubin stands in their way."
+        "description":"Madeline's team reunites and discusses how to move forward with the Ring case, but the tools needed to conduct a forensic investigation are blocked by a fiery Maxine Rubin."
     },
     {
         "comicId":0,
@@ -156,6 +156,13 @@
     {
         "comicId":1,
         "chapter":10,
+        "pages":21,
+        "title":"The Daughter of the NSPD - Original",
+        "description":"In an effort to expand what little evidence and information she has to try to solve the case, Madeline sends Juliette and Julian to the NSPD to get help but a fiery figure in Maxine Rubin stands in their way."
+    },
+    {
+        "comicId":1,
+        "chapter":11,
         "pages": 7,
         "title":"Isolated Fears",
         "description":"Juliette runs into Maxine Rubin on her day off, which makes Maxine more uncomfortable than she was before."
