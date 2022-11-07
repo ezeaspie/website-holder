@@ -172,6 +172,13 @@
         "chapter":0,
         "pages": 16,
         "title":"Kindling",
-        "description":"Maxine Rubin and Damien Schmidt take a mid-tier criminal in Yuri Maximillian and try to uncover why this random criminal has access to vast resources."
+        "description":"Maxine Rubin and Damien Schmidt take on a mid-tier criminal in Yuri Maximillian and try to uncover why this random criminal has access to vast resources."
+    },
+    {
+        "comicId":2,
+        "chapter":1,
+        "pages":23,
+        "title":"Snuffed",
+        "description":"After arresting Yuri Maximillian, Maxine and Damien are put on mundane patrols meant to punish them for being effective officers. Maxine begins to question whether the NSPD's 'False Peace' is worth ceding so much power to the gangs."
     }
 ]
