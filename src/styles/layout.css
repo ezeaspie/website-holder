@@ -1,0 +1,1974 @@
+/* CSS FILE FOR CUSTOM STYLES // FOR RESET STYLES SEE RESET.CSS */
+
+/* 
+~0
+TABLE OF CONTENTS - Use '~{num}' to navigate to sections
+0. TOP
+1. GALLERY STYLES
+2. HEADER STYLES
+3. COMIC OVERVIEW STYLES
+4. READER STYLES
+5. BANNER STYLES
+6. BLOG PREVIEW STYLES
+7. BLOG ARTICLE STYLES
+
+Media Rules 
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+/* Color Theme Swatches in Hex */
+.Web-Base-1-hex { color: #565557; }
+.Web-Base-2-hex { color: #E8E5E5; }
+.Web-Base-3-hex { color: #D5D2D6; }
+.Web-Base-4-hex { color: #2E2E2E; }
+.Web-Base-5-hex { color: #1C1B1C; }
+
+/* Color Theme Swatches in Hex */
+.Web-Accents-1-hex { color: #E6260C; }
+.Web-Accents-2-hex { color: #F0D620; }
+.Web-Accents-3-hex { color: #45C4DB; }
+.Web-Accents-4-hex { color: #F06DC0; }
+.Web-Accents-5-hex { color: #E69216; }
+
+.container {
+  padding:1em;
+}
+
+.mainCharacters, .supportCharacters{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin:0;
+}
+
+.mainCharacterCard{
+  margin:1rem;
+  align-self: stretch;
+}
+
+.mainCharacterCard img{
+  margin-bottom: .5rem;
+  width:100%;
+}
+
+.mainCharacterCard a, .supportCharacters a{
+  color:#000;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  padding:0;
+  margin:0;
+  color:inherit;
+}
+
+.supportCharacters{
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.supportCharacters a{
+  text-align: left;
+}
+
+.supportCharacterCard{
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 40%;
+}
+
+.supportCharacterColor{
+  height:inherit;
+  width:10%;
+  border:solid 1px #000;
+}
+
+.wikiNavContainer{
+  max-width: 1200px;
+  margin:1rem auto;
+}
+/* 
+~1#################################################################################
+ GALLERY STYLES 
+#################################################################################
+*/
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 1em;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+  margin: 1em 0;
+}
+
+.gallery-image,
+.comic-overview-cover,
+.profile-image{
+  box-sizing: border-box;
+  border:solid 5px #2d2d2d;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+}
+
+.gallery-gatsby-image{
+  cursor: pointer;
+}
+
+.sidebar{
+  position: fixed;
+  overflow-y: scroll;
+  z-index:100;
+  min-width: 100%;
+  top:0;
+  bottom:0;
+  background: #1C1B1C;
+  color:#EDEAE5;
+  transition: all linear .3s;
+  padding:.5rem;
+}
+
+.sidebar h2,
+.sidebar h3 {
+  text-align: center;
+}
+.sidebar p {
+  padding:.5rem 0;
+  margin: 0 auto;
+  max-width:80%;
+}
+.hidden{
+  left:100%;
+}
+
+.open{
+  left:0%;
+}
+
+.open:hover{
+  left:10%;
+  cursor: pointer;
+}
+
+.comic-overview-excerpt{
+  margin-bottom:1.35em;
+}
+
+.gallery-item-tag,
+.blog-preview,
+.comic-overview-content{
+  margin-top:1.35em;
+  box-sizing: border-box;
+  padding: .5em;
+  font-family:'Roboto';
+  color: #E8E5E5;
+  background: #1C1B1C;
+  border:double 8px #E8E5E5;
+}
+
+.gallery-item-tag p{
+  margin: 0;
+  opacity: 1;
+}
+
+.gallery-item-tag b{
+  color:#fff;
+  opacity: 1;
+}
+
+.gallery-header {
+  background: #1d1d1d;
+}
+
+/* 
+~2#################################################################################
+Header Styles 
+#################################################################################
+*/
+
+header {
+  border-bottom:solid 1px #d3d3d3;
+  background: #1d1d1d;
+}
+
+header a, .gallery-header li{
+  text-decoration: none;
+  color:#EDEAE5;
+  transition:ease .5s all;
+  display: inline-block;
+}
+
+header a:hover, .gallery-header li:hover{
+  cursor: pointer;
+  opacity: .6;
+}
+
+.main-head{
+  padding: .5em 1.5em;
+  padding-bottom: 0;
+  border-bottom:solid 1px #d3d3d3;
+}
+
+.main-head p {
+  font-family: 'Staatliches';
+}
+
+header ul, .gallery-header{
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+header li, .gallery-header li{
+  font-family: 'Staatliches';
+  margin: 0;
+  width: 100%;
+}
+header ul a, .gallery-header li{
+  padding: .5em;
+  text-align: center;
+  border-left:solid 1px #d3d3d3;
+  border-right:solid 1px #d3d3d3;
+  transition:ease .5s all;
+  border-bottom:solid 1px #d3d3d3;
+  width: 100%;
+}
+
+header a:hover, .gallery-header li:hover{
+  transition:ease .5s all;
+}
+
+html{
+  background: #E8E5E5;
+}
+
+/* 
+~3#################################################################################
+COMIC OVERVIEW STYLES 
+#################################################################################
+*/
+.comic-info{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.comic-cover{
+  box-sizing: border-box;
+  border:solid 5px #2d2d2d;
+  border-radius: 5px;
+  width:50%;
+  margin-bottom: 1.35em;
+}
+
+/* 
+~4#################################################################################
+Reader Styles 
+#################################################################################
+*/
+
+.reader{
+  border-radius: 5px;
+}
+
+.reader a {
+  text-decoration: none;
+  color: rgba(237, 234, 229,.8);
+}
+
+.reader a:hover{
+  color:rgb(237, 234, 229);
+}
+.reader-image {
+  display: flex;
+  justify-content: center;
+}
+
+.reader-image img {
+  border: solid 5px #1d1d1d;
+  border-radius: 5px;
+}
+.reader-title-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: .5em;
+  position: relative;
+  background: #1d1d1d;
+  border-radius: 5px 5px 0 0;
+  color: #EDEAE5;
+}
+
+.reader-title-div h5{
+  margin:0;
+  padding: 1em;
+  text-align: center;
+}
+
+.reader-comic-title{
+  font-style: italic;
+}
+
+.reader-chapter-title:hover,
+.reader-page-number:hover{
+  cursor: pointer;
+}
+
+.reader-image-list{
+  list-style-type: none;
+  padding:0;
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modern-reader-next, .reader-toggle{
+  display:block;
+  margin:.25rem auto;
+  border-radius: 5px;
+  padding:.5rem 1rem;
+  width:fit-content;
+  background: #2e8bf5;
+  color:#fff;
+}
+
+.modern-reader-next h5{
+  color:#fff;
+  margin:0;
+}
+
+.collapse-list{
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  background: #1d1d1d;
+  color: #EDEAE5;
+  border-radius: 0 0 5px 5px;
+}
+
+.collapse-list li{
+  box-sizing:border-box;
+  margin: 0;
+  border-top:solid 1px #EDEAE5;
+} 
+
+.list-closed{
+  max-height: 0;
+  overflow: hidden;
+  transition:ease .5s all;
+}
+
+.list-open{
+  transition:ease .5s all;
+}
+
+.pull-out-menu{
+  background: #1C1B1C;
+  position:fixed;
+  right:0;
+  width:100%;
+  transition:ease-in .2s all;
+  height:100vh;
+  top:0;
+  z-index: 98;
+  overflow: scroll;
+  margin:0;
+  padding:0;
+}
+
+.pull-out-list{
+  max-width: 750px;
+  list-style-type: none;
+  padding:0;
+  margin:0 auto;
+}
+
+.pull-out-item{
+  border:double 5px #EDEAE5;
+  text-align: center;
+  transition: ease-in-out .2s all;
+}
+.pull-out-item:hover{
+  transition: ease-in-out .2s all;
+  background-color: #565557;
+}
+
+.pull-out-item a{
+  padding: 1rem;
+  width:100%;
+  display: block;
+}
+
+.menu-closed{
+  position:fixed;
+  right:0;
+  width:0;
+  overflow: hidden;
+  transition:ease-in .2s all;
+}
+
+.pull-out-menu a{
+  color: #EDEAE5;
+}
+.togglePullOut{
+  position:fixed;
+  bottom: 5%;
+  right:0;
+  z-index: 99;
+  padding:.25rem .25rem;
+  font-size:1.25rem;
+  color:#EDEAE5;
+  border:none;
+  border-radius: 5px;
+  background-color: #1C1B1C;
+  opacity: .7;
+  transition: ease-in-out .2s all;
+}
+
+.open-menu{
+  transform: rotate(180deg);
+  transition: ease-in-out .2s all;
+}
+
+/* 
+~5#################################################################################
+ BANNER STYLES 
+#################################################################################
+*/
+.carousel-container {
+  min-height:235px;
+  max-height:300px;
+};
+
+.carousel-children {
+  position: relative;
+}
+
+.carousel-slide {
+  position: relative;
+}
+
+.carousel-slide img {
+  min-width: 100%;
+}
+
+.carousel-slide p {
+  top:0;
+  bottom:0;
+}
+
+.arrow {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 10%;
+  font-size: 3em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.left{
+  left:0;
+  bottom:0;
+}
+
+.right{
+  right:0;
+  bottom:0;
+}
+
+.slick-slide div{
+  position: relative;
+}
+
+.slick-slide a{
+  transition: ease-in-out .4s all;
+  position: absolute;
+  top:0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index:3;
+  height:15rem;
+}
+.slick-slide img{
+  position: absolute;
+  top:-10%;
+}
+
+.slick-slider:hover .banner-image-cover{
+  background:rgba(29, 27, 29, 0);
+  transition: ease-in .5s all;
+}
+
+.banner-image-cover{
+  content: " ";
+  position: relative;
+  width:100%;
+  height:30rem ;
+  background:rgba(29, 27, 29, 0.25);
+  z-index:1;
+  transition: ease-in .5s all;
+}
+
+.banner-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+  z-index: 2;
+}
+
+.banner-description h2,
+.banner-description h3 {
+  box-sizing: border-box;
+  transition:ease-in-out .4s all;
+  background: #1C1B1C;
+  color: #E8E5E5;
+}
+
+.banner-description h2{
+  display: inline-block;
+  width: fit-content;
+  font-size: 2.5rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  padding:.5rem 1.5rem 0 1.5rem;
+  }
+
+.banner-description h3{
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  word-spacing: 30%;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  align-self: flex-end;
+  width: fit-content;
+}
+
+.banner:hover .banner-title {
+    background: rgba(29, 29, 29, 1);
+}
+
+.banner:hover .banner-desc {
+    background: rgba(29, 29, 29, 1);
+}
+
+
+.banner-content{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:1;
+  transition:ease .5s all;
+}
+
+.banner-desc,
+.banner-title{
+  font-size:2rem;
+}
+
+.orange-banner{
+  border-style: solid;
+  border-width: 0 0 15px 0;
+  border-color: #E69216;
+}
+.pink-banner{
+  border-style: solid;
+  border-width: 0 0 15px 0;
+  border-color: #F06DC0;
+}
+.red-banner{
+  border-style: solid;
+  border-width: 0 0 15px 0;
+  border-color: #E6260C;
+}
+.yellow-banner{
+  border-style: solid;
+  border-width: 0 0 15px 0;
+  border-color: #F0D620;
+}
+.blue-banner{
+  border-style: solid;
+  border-width: 0 0 15px 0;
+  border-color: #45C4DB;
+}
+
+.orange-text{
+  color:#E69216;
+}
+.pink-text{
+  color:#F06DC0;
+}
+.red-text{
+  color:#E6260C;
+}
+.yellow-text{
+  color:#F0D620;
+}
+.blue-text{
+  color:#45C4DB;
+}
+
+.orange{
+  background-color:#E69216;
+}
+.pink{
+  background-color:#F06DC0;
+}
+.red{
+  background-color:#E6260C;
+}
+.yellow{
+  background-color:#F0D620;
+}
+.blue{
+  background-color:#45C4DB;
+}
+.hidden-animate {
+     animation: hide 2s linear 0s 1;
+}
+
+/* 
+~6#################################################################################
+ BLOG PREVIEW STYLES 
+#################################################################################
+*/
+
+.blog-preview-list{
+  width: 100%;
+}
+
+.blog-preview-list a{
+  width: 100%;
+}
+
+.blog-preview-list h4{
+  width:100%;
+  max-width: 1200px;
+  font-size:2rem;
+  margin: 1rem 0;
+}
+
+.blog-preview{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: .95;
+  width:100%;
+  transition: ease-in-out .5s all;
+  justify-content: center;
+  max-width:1200px;
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+}
+
+.blog-preview-title{
+  font-family: 'Staatliches';
+  font-size:1.5rem;
+  text-transform: uppercase;
+  border-bottom: solid 3px #E8E5E5;
+  width: fit-content;
+}
+
+.blog-preview:hover{
+  opacity: 1;
+  transition: ease-in-out .5s all;
+}
+
+.blog-preview a{
+  display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  color: #EDEAE5;
+  text-decoration: none;
+}
+
+.blog-preview-content{
+  padding: 1em;
+  width: 100%;
+}
+
+.blog-preview-image{
+  min-width:80%;
+  min-height: 200px;
+  margin: 0 auto;
+  width:20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-preview h6{
+  font-size: .9rem;
+}
+
+/* 
+~7#################################################################################
+ BLOG ARTICLE STYLES 
+#################################################################################
+*/
+
+.blog-post-container{
+  max-width: 1100px;
+  margin:0 auto;
+}
+
+.blog-title-category{
+  width:fit-content;
+  border-width: 0 0 15px 0;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.blog-title-main{
+  font-size: 5rem;
+  padding:0;
+  margin:0;
+}
+
+.blog-main-img{
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1.45em;
+}
+
+.blog-main-content{
+  max-width:1100px;
+  padding: 0 1.5em;
+  font-size:1.1em;
+}
+
+.blog-main-content>p{
+  font-family: 'Roboto';
+  line-height: 1.8em;
+  max-width:700px;
+  word-spacing: .1rem;
+}
+
+.blog-main-content>h2{
+  font-size: 2.4rem;
+}
+
+.blog-main-footer{
+  display:block;
+  width:50%;
+  border-width: 10px 0 0px 0;
+  font-family: 'Staatliches', sans-serif;
+  text-align: right;
+  font-size: 1.3rem;
+  padding-top:.5rem;
+}
+
+.blog-main-content img {
+    box-sizing: border-box;
+  border:solid 5px #2d2d2d;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+  width:100%;
+  margin:0%;
+  margin-bottom: 1.5rem;
+  
+}
+.blog-main-content h1,
+.blog-main-content h2,
+.blog-main-content h3,
+.blog-main-content h4,
+.blog-main-content h5,
+.blog-main-content h6,
+.blog-post-container h1,
+.blog-post-container h2{
+  font-family:'Staatliches';
+}
+
+.blog-main-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-main-div h1 {
+  text-align: center;
+  font-family: 'Staatliches';
+  border-bottom:solid 2px #000;
+}
+
+.blog-date {
+  font-size: 2rem;
+  font-weight: initial;
+  opacity: 1;
+}
+
+.blog-link-button{
+  box-sizing: border-box;
+  padding:.5rem 1rem;
+  display: inline-block;
+  margin: 1rem 1.5em;
+  font-family: 'Staatliches',sans-serif;
+  font-size: 1rem;
+  width:fit-content;
+  color:#000;
+}
+
+/* 
+~8#################################################################################
+ COMIC PREVIEW STYLES 
+#################################################################################
+*/
+
+.comic-preview-content{
+  padding:0 1rem;
+}
+
+.comic-preview-image{
+  width:100%;
+  background-size: cover;
+  height:200px;
+  padding:.5rem;
+}
+
+.comic-preview-title{
+  font-size:3.5rem;
+  font-family: 'Staatliches';
+  width:fit-content;
+  padding:0;
+  margin:0;
+}
+
+.comic-chapter-list a {
+  min-width: 300px;
+  width: 48%;
+}
+
+#comic-title-only a {
+  width: 100%;
+}
+
+.comic-list{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.comic-overview-main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 1.35em;
+  justify-content: space-around;
+}
+
+.comic-overview-main h2 {
+  margin: 0 !important;
+  padding-bottom: .5em;
+}
+
+.comic-overview-content{
+  width:100%;
+  padding: 1em;
+  margin: 0 .5em;
+}
+
+.comic-overview-cover {
+  min-height:300px;
+  width:100%;
+  background-size: cover;
+  
+}
+
+.comic-overview-main a {
+  color: #EDEAE5;
+  text-align: center;
+}
+
+.comic-overview-main h4 {
+  border: solid 1px #EDEAE5;
+  padding:.5em 0;
+  border-radius: 5px;
+  margin: .5em;
+  transition:ease-in-out .3s all;
+}
+
+.comic-overview-main h4:hover{
+  cursor: pointer;
+  opacity: .8;
+  transition:ease-in-out .3s all;
+  
+}
+
+/* 
+~9#################################################################################
+ COMIC INDEX STYLES 
+#################################################################################
+*/
+
+.comic-index{
+  display: flex;
+  flex-direction: column;
+  background: #1C1B1C;
+  padding:  2em 1em;
+}
+
+.comic-index a{
+  color:#1C1B1C;
+
+}
+
+.comic-index .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width:1400px;
+  flex-direction: column;
+}
+
+.comic-index-preview {
+  margin-bottom: 1.35em;
+  background: #E8E5E5;
+  max-width: 250px;
+  transition: ease-in .2s all;
+}
+.comic-index-preview:hover{
+  transform: scale(1.05);
+  transition: ease-in .2s all;
+}
+
+.comic-index-preview-image{
+  width:250px;
+  height:250px;
+  background-size: cover;
+  transition:ease-in-out .5s all;
+}
+
+.comic-index-preview-tagline{
+  max-width:150px;
+  font-family: "Staatliches",sans-serif;
+  font-size: 1.25rem;
+  display: none;
+  padding:.5rem;
+
+}
+
+.comic-index h4{
+  color:#EDEAE5;
+  max-width: 1200px;
+  width:100%;
+  margin:0 auto;
+}
+
+.comic-index-preview h4{
+  box-sizing: border-box;
+  text-align: left;
+  padding-left:.25rem;
+  margin: 0;
+  font-size:2.5rem;
+  text-transform: uppercase;
+  font-family: 'Staatliches', sans-serif;
+  color:#1C1B1C;
+  line-height: 2.25rem;
+  padding-top:1rem;
+}
+
+/* 
+~10#################################################################################
+ PROFILE STYLES 
+#################################################################################
+*/
+
+.main-header {
+  font-size:1.75rem;
+  font-family: 'Staatliches';
+  text-align: left;
+  margin: 1em 0;
+}
+
+.profile-image{
+  width:30%;
+  margin:1em 35%;
+  max-width: 300px;
+}
+
+.profile-main{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width:100%;
+}
+.profile-content{
+  max-width:1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-content ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-content ul li{
+  background: #1d1d1d;
+  color:#EDEAE5;
+  border-radius: 5px;
+  padding: .5em 1em;
+  font-size:120%;
+}
+
+.profile-content ul:first-of-type{
+    font-family:'Staatliches';
+}
+
+.profile-content ul li a{
+  color:#EDEAE5;
+  font-size:100%;
+  display: inline-block;
+  width:100%;
+}
+
+.profile-content ul li a:hover{
+  opacity: .8;
+}
+
+.profile-content b{
+  font-family:'Staatliches';
+}
+
+
+
+.btn{
+  font-weight:bold;
+  border:none;
+  transition:ease-in-out .4s transform;
+  padding:.5em 1em;
+  border-radius:5px;
+  color: #1C1B1C;
+}
+
+.btn:hover{
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.btn-call-to-action{
+  background:#38c968;
+  color:#fff;
+}
+
+.btn-info{
+  background:#EDEAE5;
+  color:#1C1B1C;
+}
+
+.btn-alt-text{
+  color:#EDEAE5;
+}
+
+.btn-set{
+  display: flex;
+}
+
+.btn-set a{
+  display: inline;
+}
+
+/* 
+~11#################################################################################
+ CHAPTER PREVIEW STYLES 
+#################################################################################
+*/
+.comic-overview-container{
+  background-color: #1C1B1C;
+}
+
+.comic-overview-title{
+  font-size:4rem;
+  font-family: 'Staatliches', sans-serif;
+  margin:0;
+}
+
+.comic-overview-banner{
+  margin-bottom:1rem;
+  
+}
+
+.heroine-rises{
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.comic-overview{
+  opacity: 1;
+  border: none;
+  width:90%;
+}
+
+.heroine-rises a{
+  text-decoration: none;
+  color:#000;
+  display: inline-block;
+  width: 100%;
+}
+
+.heroine-rises h5{
+  margin: 1.5em .5em;
+}
+
+.chapter-preview a{
+  display: inline-block;
+  margin:0 .5em;
+  width:100%;
+  height: 100%;
+}
+/* .comic-chapter-list li,
+.chapter-preview
+{
+  background: #1d1d1d;
+  color: #EDEAE5;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+  opacity: .9;  
+  transition:ease-in-out .3s all;
+  width:100%;
+} */
+.comic-chapter-list li,
+.chapter-preview
+{
+  box-sizing: border-box;
+  background-color: rgba(28, 27, 28, .95);
+  border: double 6px #E8E5E5;
+  color: #E8E5E5;
+  opacity: 1;  
+  transition:ease-in-out .3s all;
+  width:100%;
+}
+
+
+.chapter-preview{
+  display: flex;
+  flex-direction:column;
+  padding:1em 1em;
+  margin-bottom:.75em;
+}
+
+.chapter-preview-desc{
+  max-height:0;
+  overflow: hidden;
+  transition: ease-in-out .4s all;
+}
+
+.shown{
+  padding:.5em 0;
+  max-height:1000px;
+}
+
+.chapter-preview-info h4{
+  font-style: oblique;
+  font-weight: 200;
+}
+
+.chapter-preview-info{
+  min-width: 100%;
+  margin-bottom:1rem;
+}
+
+.chapter-preview-info h4,
+.chapter-preview-info h3{
+  margin:0;
+}
+
+
+
+.chapter-preview h3{
+  font-size:1.25rem;
+}
+
+.chapter-preview-main{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chapter-preview-main p {
+  margin:0;
+  min-width: 175px;
+  padding:0;
+}
+
+footer{
+  background: #1C1B1C;
+  color:#E8E5E5;
+  padding-top:1em;
+  display: flex;
+  flex-direction: column;
+  border-top: solid 2px #E8E5E5;
+
+}
+
+footer .copyright{
+  text-align: center;
+  padding:.5em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin:1em;
+}
+
+footer ul a {
+  display: inline-block;
+  width: 100%;
+  transition:ease-in-out .4s opacity;
+  color:#E8E5E5;
+}
+
+footer ul li{
+  border-bottom: solid 1px;
+  margin: 0;
+  padding: .5em;
+}
+
+footer ul a:hover {
+  opacity: .8;
+  transition:ease-in-out .4s opacity;
+}
+footer ul .footer-title {
+  font-family: 'Staatliches';
+  font-weight: bold;
+  font-size:2rem;
+  border: none;
+  border-bottom: solid 2px;
+}
+
+footer a {
+  color:#1C1B1C;
+  
+}
+
+.footer-main{
+  display: flex;
+  flex-direction: column;
+}
+
+.support-links{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.support-links a{  
+  display:inline-block;
+  background:#38c968;
+  color:#fff;
+  width: 100%;
+  font-weight: bold;
+}
+
+.support-links a:hover{
+  color:#fff;
+}
+
+.blog-post-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:100%;
+    align-content: center;
+}
+
+.blog-preview {
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.introduction,.wiki-container,.comic-section {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.wiki-container h2{
+  text-align: center;
+}
+
+.wiki-section{
+    background: #2d2d2d;
+    color: #EDEAE5
+}
+
+.introduction h1{
+    font-size:4rem;
+}
+
+.intro-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.intro-tagline-hidden {
+    display: none;
+}
+
+.hub-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.hub-nav li:first-child{
+    font-weight: bold;
+    background:none;
+}
+
+.hub-nav li{
+    margin: 0 1rem 0 0;
+    background: #ffc500;
+    transition:ease-in-out .4s;
+}
+
+.hr-btn{
+  transition:ease-in-out .4s;
+}
+
+.hr-btn a:hover{
+  color:#000;
+  opacity: 1;
+}
+
+.hr-btn:hover, .active-btn {
+  background: #ffc500;
+}
+
+.hub-nav a{
+    color:#000;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height:100%;
+    padding: 0 .5rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.introduction h2{
+    font-size:2rem;
+}
+
+.introduction h3{
+    font-size:1.2rem;
+}
+
+#tagline-trigger{
+    padding: .5rem 1rem;
+    text-align: center;
+    display: inline-block;
+    background: #ffc500;
+    transition:ease-in-out .4s;
+}
+
+#tagline-trigger:hover,.hub-nav li:hover{
+    cursor: pointer;
+    background: #e6b100;
+}
+
+.wiki-item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin:0 0 1rem 0;
+}
+
+.wiki-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width:50%;
+}
+
+.wiki-description p{
+    font-size:1rem;
+    text-align: center;
+}
+
+.wiki-item-image, .comic-start-option {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  padding-bottom:0;
+  padding-right: 0;
+  width:30%;
+  margin: 0 0 1rem 0;
+}
+
+.wiki-item-image img{
+  width: 100%;
+}
+
+.wiki-item-image h5,.comic-start-option h5 {
+  background: #EDEAE5;
+  color:#2d2d2d;
+  text-align: center;
+  padding: 1rem;
+  font-size:1.2rem;
+}
+
+.comic-start-option h5{
+  background: #ffc500;
+  width:100%;
+}
+
+.comic-start-options{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.comic-start-option a, .comic-start-option div{
+    display: flex;
+    flex-direction: column;
+}
+
+.comic-start-option{
+    min-width:120px;
+    max-width: 250px;
+    padding: 0;
+    transition:linear .1s;
+}
+
+.comic-start-option:hover{
+    transform: scale(1.05);
+}
+
+.comic-start-option h5{
+    font-size: .8rem;
+}
+
+.char-side{
+    max-width:450px;
+    margin: 0 auto;
+    background: #d8d2c7;
+    margin-bottom:.5rem;
+}
+
+.char-info-list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.char-info-list li{
+    border-top:solid 1px #b9ae9a;
+    margin: 0;
+}
+.info-left{
+    padding: 0 .5rem;
+    font-family: 'Staatliches';
+    background: #c3baa9;
+    width:85%;
+    border-radius: 0px 0px 10px 0px;
+}
+
+.info-right{
+    padding: 0 .5rem;
+    margin: 0;
+}
+
+.char-title{
+  text-align: center;
+}
+
+#wiki-contain{
+  padding: 0 1rem;
+}
+
+.char-info{
+margin: 0;
+background: rgb(237, 234, 229, .8);
+  padding: 1rem;
+}
+
+.char-info h2{
+  text-decoration: underline 2px #000;
+}
+
+.char-info h4{
+  margin-bottom: .5rem;
+}
+
+.char-quote{
+  font-family: Calibri;
+  margin: 1rem;
+}
+
+.char-quote blockquote{
+  font-size:1.2rem;
+  font-style: italic;
+  padding: 0;
+  margin: 0rem;
+}
+
+.char-quote p{
+  font-size:.8rem;
+}
+
+.wiki-char-section{
+    clear:both;
+}
+
+.wiki-char-section-image{
+    width: 220px;
+    float:left;
+    margin-right:1rem;
+    border:solid 1px #c3baa9;
+    padding:.25rem;
+    background: #e7e1d5;
+}
+
+.wiki-img-right{
+  float:right;
+  margin-left:1rem;
+}
+
+.wiki-char-section-image figcaption{
+    font-size:.7rem;
+    text-align: center;
+    opacity: .8;
+}
+
+.invalid-url-image{
+  width:80%;
+  max-width: 500px;
+  display: block;
+  margin:0 auto;
+}
+
+@keyframes hide {
+  0%{
+   opacity: 1;
+ }
+ 35%{
+   opacity: 0;
+ }
+ 65%{
+   opacity: 0;
+ }
+ 100%{
+   opacity: 1;
+ }
+}
+
+/* MEDIA RULES */
+
+@media screen and (min-width:480px){
+  .comic-chapter-list a{
+    width:80%;
+  }
+  #comic-title-only a {
+  width: 100%;
+}
+
+.chapter-preview-info h4{
+  font-style: oblique;
+  font-weight: 200;
+}
+
+.chapter-preview-info{
+  min-width: 60%;
+  margin-bottom:0;
+}
+
+}
+
+@media screen and (min-width:650px){
+  .comic-overview .blog-preview-image{
+    width:50%;
+    min-height:350px;
+  }
+
+  .wiki-description {
+    align-items: baseline;
+    align-content: baseline;
+    width:100%;
+  }
+  .wiki-container h2{
+    text-align: initial;
+  }
+  .wiki-description p{
+    text-align: initial;
+  }
+  
+  .wiki-item {
+     flex-direction: row;
+  }
+  .comic-start-option h5{
+     font-size:1rem;
+   }
+    
+  .blog-preview-image{
+  min-width:80%;
+  min-height: 150px;
+  margin: 0 auto;
+  width:20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+    .blog-preview a{
+  display: flex;
+        width: inherit;
+    flex-direction: row;
+    text-align: center;
+        align-content: center;
+        align-items: center;
+  color: #EDEAE5;
+  text-decoration: none;
+        justify-content: space-between;
+}
+
+.blog-preview-content{
+  padding: 1em;
+  text-align: left;
+}
+
+.comic-preview-content{
+  padding:0 1rem;
+}
+  .slick-slide,.slick-slide a{
+    height:20rem;
+  }
+  
+  .banner-description{
+    font-size:120%;
+  }
+  
+  .comic-overview-cover {
+    width:30%;
+    background-position-y: 20%;
+    max-width:250px;
+  
+}
+  .comic-overview-main{
+    flex-direction: row;
+  }
+
+  .comic-overview-content{
+  width:70%;
+  padding: 1em;
+  margin: 0 .5em;
+}
+
+.sidebar{
+  min-width:50%;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+}
+
+.open{
+  left:50%;
+}
+
+.open:hover{
+  left:50%;
+  cursor: pointer;
+}
+  .gallery{
+    flex-direction: row;
+  }
+  
+  .gallery-item{
+      max-width:45%;
+  }
+  
+  header ul, .gallery-header{
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+  header ul a, .gallery-header li{
+  border-bottom:none;
+}
+  
+  .collapse-list{
+      width:auto;
+
+  }
+  
+  .blog-preview-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .blog-preview{
+    flex-direction: row;
+  }
+  
+  .banner{
+    height: 15em;
+  }
+  .banner img{
+      top:-100px;
+    height: auto;
+    width: 100%;
+  }
+  .banner-description h2{
+    display: inline-block;
+    width: fit-content;
+    font-size: 5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    padding:.5rem 1.5rem 0 1.5rem;
+    }
+  
+  .banner-description h3{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    word-spacing: 30%;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    align-self: flex-end;
+    width: fit-content;
+  }
+
+  .orange-banner{
+    border-style: solid;
+    border-width: 0 0 25px 0;
+    border-color: #E69216;
+  }
+  .pink-banner{
+    border-style: solid;
+    border-width: 0 0 25px 0;
+    border-color: #F06DC0;
+  }
+  .red-banner{
+    border-style: solid;
+    border-width: 0 0 25px 0;
+    border-color: #E6260C;
+  }
+  .yellow-banner{
+    border-style: solid;
+    border-width: 0 0 25px 0;
+    border-color: #F0D620;
+  }
+  .blue-banner{
+    border-style: solid;
+    border-width: 0 0 25px 0;
+    border-color: #45C4DB;
+  }
+  
+  .blog-preview-image{
+      min-width:20%;
+  }
+  .comic-preview-image{
+    width:20%;
+    min-width: 200px;
+  }
+
+  .comic-index .container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  .comic-index-preview{
+    margin-right: 1rem;
+    max-width: 400px;
+  }
+
+  .comic-index-preview-top{
+    display: flex;
+    height: 250px;
+  }
+
+  .comic-index-preview-tagline{
+    display: initial;
+  }
+
+  .comic-index-preview h4{
+    font-size: 3.5rem;
+  }
+  
+  .comic-preview {
+    width:100%;
+    flex-direction:column;
+  }
+
+  .comic-preview-title{
+    border-width: 0 0 15px 0;
+    margin:.5rem 0;
+  }
+  
+  .comic-chapter-list a{
+    width:48%;
+    max-width: 400px;
+  }
+  
+  #comic-title-only a {
+  width: 100%;
+    max-width: none;
+} 
+  
+  .footer-main {
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: normal;
+    align-items: normal;
+  }
+
+  .char-info{
+    overflow: auto;
+    margin: 1rem;
+    max-width:1250px;
+    margin: 0 auto;
+}
+
+.char-side{
+  width:350px;
+}
+
+.char-side{
+  float:right;
+  margin-left:1rem;
+  clear:right;
+}
+
+.wiki-item-image, .comic-start-option {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  width:30%;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.comic-start-options{
+  flex-direction: row;
+}
+
+}
+
+.instagram-grid{
+  max-width:400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+
+}
+
+.instagram-image:first-of-type{
+  grid-column: 1/3;
+  grid-row:1/3;
+}
+
+.instagram-image:last-of-type{
+  grid-column: 3/5;
+  grid-row: 3/5;
+}
+
+@media screen and (min-width:900px){
+    
+    .intro-header{
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+    }
+    
+    .slick-slide,.slick-slide a{
+    height:25rem;
+  }
+  
+    .gallery-item{
+      max-width:30%;
+  }
+  .comic-info{
+    flex-direction: row-reverse;
+  }
+  
+  .comic-synopsis{
+    width: 60%;
+  }
+  .comic-cover{
+    width:30%;
+  }
+  .comic-title {
+    text-align: center;
+    margin: 1.35em;
+  }
+  .banner{
+    height: 24em;
+  }
+  .banner-desc,
+  .banner-title{
+    font-size:200%;
+  }
+}
+
+@media screen and (min-width:1200px){
+  .gallery-item{
+    max-width:23%;
+  }
+  .slick-slide,.slick-slide a, .banner-image-cover{
+    height:35rem;
+  }
+  .banner-image-cover{
+    height:35rem;
+  }
+}

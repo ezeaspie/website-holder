@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link, withPrefix } from 'gatsby';
-import Instagram from '../images/site/instagram.png';
 import comicData from '../data/comicData';
+import PullOutMenu from './pullOutMenu';
 
 class Reader extends Component {
     constructor(props){
@@ -12,7 +12,8 @@ class Reader extends Component {
             isPageDropdown:false,
             isFinalPage: false,
             hasNextChapter:true,
-            classicView:true,
+            classicView:false,
+            togglePullOutMenu: true,
         }
     }
 
@@ -65,7 +66,7 @@ class Reader extends Component {
 
         if(this.state.isFinalPage){
             if(!this.state.hasNextChapter){
-                link = `/${comicName}/`;
+                link = `/${comicName}-chapters/`;
             }
             else{
                 link = `/${comicName}/${chapterInfo.chapterId+1}/${0}`
@@ -90,62 +91,73 @@ class Reader extends Component {
             </Link>); 
          }
          
+         let currentChapter = chapterInfo.chapterId+1;
+
+         const checkForNextChapter = () => {
+            if (this.state.hasNextChapter){
+                return (
+                    <button>{"Next >"}</button>
+                );
+            }
+            else{
+                return (
+                    <button disabled="true">{"Next >"}</button>
+                )
+            }
+         }
 
         return (
             <div className="reader">
-                <div className="reader-title-div">
-                    <div className="chapter-list-div">
-                        <h5 
-                        onMouseOver={()=>{this.setState({isChapterDropdown: true})}}
-                        onFocus={()=>{this.setState({isChapterDropdown: true})}}
-                        onMouseOut={()=>{this.setState({isChapterDropdown:false})}}
-                        onBlur={()=>{this.setState({isChapterDropdown:false})}}
-                        onClick={()=>{this.setState({isChapterDropdown:!this.state.isChapterDropdown})}}
-                        className="reader-chapter-title">{chapterInfo.chapterId+1}. {chapterInfo.chapterTitle}</h5>
-                        <ul className={this.state.isChapterDropdown?"list-open collapse-list":"list-closed collapse-list"}>
-                        {
-                            chapterInfo.comicData.map((chapter,i)=>{
-                                return (
-                                <Link 
-                                key={`chapter${i}`}
-                                to={`/${comicName}/${chapter.chapter}/0`}>
 
-                                <li 
-                                onMouseOver={()=>{this.setState({isChapterDropdown: true})}}
-                                onFocus={()=>{this.setState({isChapterDropdown: true})}}
-                                onMouseOut={()=>{this.setState({isChapterDropdown:false})}}
-                                onBlur={()=>{this.setState({isChapterDropdown:false})}}
-                                key ={`chapter${chapter.chapter}`}
-                                className={this.state.isChapterDropdown?"list-open":"list-closed"}
-                                >
-                                <h5>{`${chapter.chapter+1}. ${chapter.title}`}</h5>
-                                </li>
-                                </Link>
-                                )
-                            })
-                        }
-                        </ul>
-                    </div>
-                    
-                    <div className="reader-list-div">
-                        <h5 
-                        className="reader-page-number"
-                        onMouseOver={()=>{this.setState({isPageDropdown: true})}}
-                        onFocus={()=>{this.setState({isPageDropdown: true})}}
-                        onMouseOut={()=>{this.setState({isPageDropdown:false})}}
-                        onBlur={()=>{this.setState({isPageDropdown:false})}}
-                        onClick={()=>{this.setState({isPageDropdown:!this.state.isPageDropdown})}}
-                        >{chapterInfo.currentPage+1}</h5>
-                        <ul className={this.state.isPageDropdown?"list-open collapse-list":"list-closed collapse-list"}>
+                <PullOutMenu isClosed={this.state.togglePullOutMenu} chapterArray = {chapterInfo.comicData} comicName={comicName}/>
+                <div className="reader-title-div">
+                    <div className='reader-header-info'>
+                        <h1>
+                            <span className='reader-comic-title'>{chapterInfo.comicName + " " + currentChapter}</span>
+                            <span className='reader-chapter-title'>{chapterInfo.chapterTitle}</span>
+                        </h1>
+                        <div className="chapter-list-div">
+                            <h2 
+                            onMouseOver={()=>{this.setState({isChapterDropdown: true})}}
+                            onFocus={()=>{this.setState({isChapterDropdown: true})}}
+                            onMouseOut={()=>{this.setState({isChapterDropdown:false})}}
+                            onBlur={()=>{this.setState({isChapterDropdown:false})}}
+                            onClick={()=>{this.setState({isChapterDropdown:!this.state.isChapterDropdown})}}
+                            className="reader-chapter-title">
+                                v
+                            </h2>
+                            
+                            <ul className={this.state.isChapterDropdown?"list-open collapse-list":"list-closed collapse-list"}>
                             {
-                                pageLinks.map((page)=>{
-                                    return page;
+                                chapterInfo.comicData.map((chapter,i)=>{
+                                    return (
+                                    <Link 
+                                    key={`chapter${i}`}
+                                    to={`/${comicName}/${chapter.chapter}/0`}>
+
+                                    <li 
+                                    onMouseOver={()=>{this.setState({isChapterDropdown: true})}}
+                                    onFocus={()=>{this.setState({isChapterDropdown: true})}}
+                                    onMouseOut={()=>{this.setState({isChapterDropdown:false})}}
+                                    onBlur={()=>{this.setState({isChapterDropdown:false})}}
+                                    key ={`chapter${chapter.chapter}`}
+                                    className={this.state.isChapterDropdown?"list-open":"list-closed"}
+                                    >
+                                    <h5>{`${chapter.chapter+1}. ${chapter.title}`}</h5>
+                                    </li>
+                                    </Link>
+                                    )
                                 })
                             }
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                    <h5 className="reader-comic-title">{chapterInfo.comicName}</h5>
+                    <div className='reader-header-buttons'>
+                        {checkForNextChapter()}
+                        <button  className='btn btn-call-to-action'>{"Next >"}</button>
+                    </div>
                 </div>
+
                 <div className="reader-image">
                     {
                         this.state.classicView?
@@ -168,7 +180,7 @@ class Reader extends Component {
                     :
                     <a 
                     className="modern-reader-next"
-                    href={this.state.hasNextChapter?`/${comicName}/${chapterInfo.chapterId+1}/${0}`:`/${comicName}/`}>
+                    href={this.state.hasNextChapter?`/${comicName}/${chapterInfo.chapterId+1}/${0}`:`/${comicName}-chapters/`}>
                         <h5 style={{textAlign:'center'}}>
                             {this.state.hasNextChapter?'Next Chapter':`${chapterInfo.comicName} Overview`}
                             </h5></a>
@@ -178,6 +190,7 @@ class Reader extends Component {
                     <li><button className="reader-toggle btn" onClick={()=>{this.setState({classicView:!this.state.classicView})}}>Change View</button></li>
                     <li><a className="btn" href="https://www.instagram.com/ezeas123/">Follow Me on Instagram!</a></li>
                 </ul>
+                <button className={this.state.togglePullOutMenu?'togglePullOut':'togglePullOut open-menu'} onClick={()=>{this.setState({togglePullOutMenu: !this.state.togglePullOutMenu})}}>{'<'}</button>
             </div>
         )
     }

@@ -36,27 +36,35 @@ class Banner extends Component {
         let bannerInfo = [
             {
                 title:"HEROINE RISES",
-                description:"Follow Madeline Harbour in her quest to change her corrupt and dangerous city of Northern Serenity!",
+                description:"A woman's dream of ",
                 image:HeroineRisesPreview,
-                link:"/heroine-rises-hub",
+                link:"/heroine-rises",
+                color: "orange",
+                keyWord: "heroism",
             },
             {
                 title:"GALLERY",
-                description:"View all of my artistic creations - ranging from early pencil sketches to maps and concept art for characters and settings!",
+                description:"A collection of ",
                 image:GalleryPreview,
                 link:`/Gallery`,
+                color: "pink",
+                keyWord:"illustrations",
             },
             {
-                title:`HEROINE RISES CHAPTER ${latestChapterId}`,
-                description:"Read the latest pages of my Heroine Rises series!",
+                title:`HEROINE RISES ${latestChapterId}`,
+                description:"Read the latest ",
                 image:withPrefix(`/comics/0/${latestChapterId-1}/1.jpg`),
                 link:`/heroine-rises/${latestChapterId-1}/0`,
+                color: "yellow",
+                keyWord:"pages"
             },
             {
                 title:"BLOG",
-                description:"Read commentaries, tutorials, and any other musings I may have about art!",
+                description:"Get up to ",
                 image:BlogPreview,
                 link:`/blog`,
+                color: "blue",
+                keyWord: "date"
             }
         ]
         let selectedObject = bannerInfo[this.state.bannerState];
@@ -95,27 +103,35 @@ class Banner extends Component {
         let bannerInfo = [
             {
                 title:"HEROINE RISES",
-                description:"Follow Madeline Harbour in her quest to change her corrupt and dangerous city of Northern Serenity!",
+                description:"A woman's dream of ",
                 image:HeroineRisesPreview,
-                link:"/heroine-rises-hub",
+                link:"/heroine-rises",
+                color: "orange",
+                keyWord: "heroism",
             },
             {
                 title:"GALLERY",
-                description:"View all of my artistic creations - ranging from early pencil sketches to maps and concept art for characters and settings!",
+                description:"A collection of ",
                 image:GalleryPreview,
                 link:`/Gallery`,
+                color: "pink",
+                keyWord:"illustrations",
             },
             {
-                title:`HEROINE RISES CHAPTER ${latestChapterId}`,
-                description:"Read the latest pages of my Heroine Rises series!",
+                title:`HEROINE RISES ${latestChapterId}`,
+                description:"Read the latest ",
                 image:withPrefix(`/comics/0/${latestChapterId-1}/1.jpg`),
                 link:`/heroine-rises/${latestChapterId-1}/0`,
+                color: "yellow",
+                keyWord:"pages"
             },
             {
                 title:"BLOG",
-                description:"Read commentaries, tutorials, and any other musings I may have about art!",
+                description:"Get up to ",
                 image:BlogPreview,
                 link:`/blog`,
+                color: "blue",
+                keyWord: "date"
             }
         ]
 

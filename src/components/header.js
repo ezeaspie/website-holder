@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
       </div> 
       <nav>
         <ul>
-        <li className="hr-btn"><Link to="/heroine-rises-hub"><i>Heroine Rises</i></Link></li>
+        <li className="hr-btn"><Link to="/heroine-rises"><i>Heroine Rises</i></Link></li>
         <li><Link to="/Gallery">Gallery</Link></li>
         <li><Link to="/comics">Comics</Link></li>
         <li><Link to="/blog">Blog</Link></li>

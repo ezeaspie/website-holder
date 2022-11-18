@@ -12,16 +12,19 @@ const Blog = ({data}) => (
       <div className="blog-post-list">
       <h4>{data.allContentfulBlogPost.totalCount} Posts</h4>
         {data.allContentfulBlogPost.edges.map(({ node },i) => (
-            <Link to={'/blog/' + node.slug} key={i}>
             <div className="blog-preview">
-              <img className="blog-preview-image" src={node.coverImage.resize.src} alt={node.coverImage.description}/>        
+            <Link to={'/blog/' + node.slug} key={i}>
+            <div 
+                className="blog-preview-image"
+                style={{backgroundImage: `url(${node.coverImage.resize.src})`}}>
+                </div>       
               <div className="blog-preview-content">
-                <h5>{node.title}</h5>
+                <h5 className="blog-preview-title">{node.category + ': ' + node.title}</h5>
                 <h6>{moment(node.publishDate).format('MMMM DD YYYY')}</h6>
                 <p>{documentToReactComponents(node.childContentfulBlogPostContentRichTextNode.json.content[0])}</p>
-              </div>            
+              </div> 
+            </Link>           
             </div>
-            </Link>
         ))}
       </div>
     </div>
@@ -37,7 +40,7 @@ export const query = graphql`
       edges {
         node {
           coverImage {
-            resize(width: 300) {
+            resize(width: 600) {
               src
             }
             description
@@ -47,6 +50,7 @@ export const query = graphql`
           }
           publishDate
           title
+          category
           slug
         }
       }

@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql , Link} from 'gatsby'
 import Header from './header'
-import './layout.css'
+import '../styles/reset.css'
+import '../styles/layout.css'
+
 
 let igLink = `https://www.instagram.com/ezeas123/`;
 
@@ -36,7 +38,7 @@ const Layout = ({ children }) => (
               <li><Link to="blog">Blog</Link></li>
               <li><Link to="comics">Comics</Link></li>
               <li><Link to="heroine-rises"><i>Heroine Rises</i></Link></li>
-              <li><Link to="one-shots">One Shots</Link></li>
+              <li><Link to="one-shots-chapters">One Shots</Link></li>
               <li><Link to="about">About</Link></li>
             </ul>
             <ul className="footer-contact">
