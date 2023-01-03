@@ -13,15 +13,19 @@ class ChapterPreview extends Component {
         return(
             <div className="chapter-preview">
                     <div className="chapter-preview-main">
-                        <p>{chapter.chapter+1}. {chapter.title}</p>
+                        <div className='chapter-preview-info'>
+                            <h4>{this.props.title} {chapter.chapter+1}</h4>
+                            <h3>{chapter.title}</h3>
+                        </div>
+                        
                         <div className="btn-set">
                         <button 
                         onClick={()=>this.setState({descIsShown:!this.state.descIsShown})}
-                        className="btn btn-info">i</button>
+                        className={"btn btn-info"}>?</button>
                         
-                        <Link to={this.props.link}>
-                        <button className="btn btn-call-to-action">
-                        Read Now!
+                        <Link to={"/"+this.props.link}>
+                        <button className={"btn " + this.props.color}>
+                        Read Now
                         </button>
                         </Link>
                         </div>

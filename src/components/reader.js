@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { Link, withPrefix } from 'gatsby';
-import Instagram from '../images/site/instagram.png';
 import comicData from '../data/comicData';
+import PullOutMenu from './pullOutMenu';
+import Instagram from '../images/site/instagram.png';
 
 class Reader extends Component {
     constructor(props){
@@ -12,7 +13,8 @@ class Reader extends Component {
             isPageDropdown:false,
             isFinalPage: false,
             hasNextChapter:true,
-            classicView:true,
+            hasPrevChapter:true,
+            togglePullOutMenu: true,
         }
     }
 
@@ -23,6 +25,9 @@ class Reader extends Component {
         let currentChapter = chapterInfo.chapterId;
         if(latestChapter === currentChapter){
             this.setState({hasNextChapter:false});
+        }
+        if(currentChapter === 0){
+            this.setState({hasPrevChapter:false});
         }
 
         if(chapterInfo.currentPage + 1 >= chapterInfo.chapterPages){
@@ -47,11 +52,9 @@ class Reader extends Component {
             let source = `/comics/${chapterInfo.comicId}/${chapterInfo.chapterId}/${i}.jpg`;
 
             imageCollection.push(
-                <img alt={altText} src={withPrefix(source)} style={{width:'100%', maxWidth:'920px'}}/>
+                <img alt={altText} src={withPrefix(source)} style={{width:'100%'}}/>
             ); 
          }
-
-         console.log(imageCollection);
 
         let link = `/${comicName}/${chapterInfo.chapterId}/${chapterInfo.currentPage+1}`;
 
@@ -65,7 +68,7 @@ class Reader extends Component {
 
         if(this.state.isFinalPage){
             if(!this.state.hasNextChapter){
-                link = `/${comicName}/`;
+                link = `/${comicName}-chapters/`;
             }
             else{
                 link = `/${comicName}/${chapterInfo.chapterId+1}/${0}`
@@ -90,68 +93,82 @@ class Reader extends Component {
             </Link>); 
          }
          
+         let currentChapter = chapterInfo.chapterId+1;
+
+         const checkForNextChapter = () => {
+            if (this.state.hasNextChapter){
+                return (
+                    <a className="cycle-btn" href={`/${comicName}/${chapterInfo.chapterId+1}/${0}`}>{"Next >"}</a>
+                );
+            }
+            else{
+                return (
+                    null
+                )
+            }
+         }
+
+         const checkForPrevChapter = () => {
+            if (this.state.hasPrevChapter){
+                return (
+                    <a className="cycle-btn" href={`/${comicName}/${chapterInfo.chapterId-1}/${0}`}>{"< Prev"}</a>
+                );
+            }
+            else{
+                return (
+                    null
+                )
+            }
+         }
 
         return (
             <div className="reader">
-                <div className="reader-title-div">
-                    <div className="chapter-list-div">
-                        <h5 
-                        onMouseOver={()=>{this.setState({isChapterDropdown: true})}}
-                        onFocus={()=>{this.setState({isChapterDropdown: true})}}
-                        onMouseOut={()=>{this.setState({isChapterDropdown:false})}}
-                        onBlur={()=>{this.setState({isChapterDropdown:false})}}
-                        onClick={()=>{this.setState({isChapterDropdown:!this.state.isChapterDropdown})}}
-                        className="reader-chapter-title">{chapterInfo.chapterId+1}. {chapterInfo.chapterTitle}</h5>
-                        <ul className={this.state.isChapterDropdown?"list-open collapse-list":"list-closed collapse-list"}>
-                        {
-                            chapterInfo.comicData.map((chapter,i)=>{
-                                return (
-                                <Link 
-                                key={`chapter${i}`}
-                                to={`/${comicName}/${chapter.chapter}/0`}>
 
-                                <li 
-                                onMouseOver={()=>{this.setState({isChapterDropdown: true})}}
-                                onFocus={()=>{this.setState({isChapterDropdown: true})}}
-                                onMouseOut={()=>{this.setState({isChapterDropdown:false})}}
-                                onBlur={()=>{this.setState({isChapterDropdown:false})}}
-                                key ={`chapter${chapter.chapter}`}
-                                className={this.state.isChapterDropdown?"list-open":"list-closed"}
-                                >
-                                <h5>{`${chapter.chapter+1}. ${chapter.title}`}</h5>
-                                </li>
-                                </Link>
-                                )
-                            })
-                        }
-                        </ul>
-                    </div>
-                    
-                    <div className="reader-list-div">
-                        <h5 
-                        className="reader-page-number"
-                        onMouseOver={()=>{this.setState({isPageDropdown: true})}}
-                        onFocus={()=>{this.setState({isPageDropdown: true})}}
-                        onMouseOut={()=>{this.setState({isPageDropdown:false})}}
-                        onBlur={()=>{this.setState({isPageDropdown:false})}}
-                        onClick={()=>{this.setState({isPageDropdown:!this.state.isPageDropdown})}}
-                        >{chapterInfo.currentPage+1}</h5>
-                        <ul className={this.state.isPageDropdown?"list-open collapse-list":"list-closed collapse-list"}>
+                <PullOutMenu isClosed={this.state.togglePullOutMenu} chapterArray = {chapterInfo.comicData} comicName={comicName}/>
+                <div className="reader-title-div">
+                    <div className='reader-header-info'>
+                            <h1 className='reader-comic-title'>{chapterInfo.comicName + " Chapter " + currentChapter}</h1>
+                        <div className="chapter-dropdown">
+                            <div
+                            className='chapter-dropdown-button'
+                            onFocus={()=>{this.setState({isChapterDropdown: true})}}
+                            onBlur={()=>{this.setState({isChapterDropdown:false})}}
+                            onClick={()=>{this.setState({isChapterDropdown:!this.state.isChapterDropdown})}}>
+                                <h2 className='reader-chapter-title'>{chapterInfo.chapterTitle}</h2>
+                                <span>V</span>
+                            </div>
+                            
+                            <ul 
+                            className={this.state.isChapterDropdown?"list-open collapse-list":"list-closed collapse-list"}
+                            >
                             {
-                                pageLinks.map((page)=>{
-                                    return page;
+                                chapterInfo.comicData.map((chapter,i)=>{
+                                    return (
+                                    <li 
+                                    
+                                    key ={`chapter${chapter.chapter}`}
+                                    className={this.state.isChapterDropdown?"list-open":"list-closed"}
+                                    >
+                                    <Link 
+                                    key={`chapter${i}`}
+                                    to={`/${comicName}/${chapter.chapter}/0`}>
+                                    <h5>{`${chapter.chapter+1}. ${chapter.title}`}</h5>
+                                    </Link>
+                                    </li>
+                                    )
                                 })
                             }
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                    <h5 className="reader-comic-title">{chapterInfo.comicName}</h5>
+                    <div className='reader-header-buttons'>
+                        {checkForPrevChapter()}
+                        {checkForNextChapter()}
+                    </div>
                 </div>
+
                 <div className="reader-image">
-                    {
-                        this.state.classicView?
-                        <Link to={link}>
-                            <img alt={imgAlt} src={withPrefix(imageSource)} style={{width:'100%', maxWidth:'920px'}}/>
-                        </Link>:
+                
                         <ul className="reader-image-list">
                             {
                               imageCollection.map((image)=>{
@@ -159,25 +176,16 @@ class Reader extends Component {
                               })  
                             }
                         </ul>
-                    }
                     
                 </div>
-                {
-                    this.state.classicView?
-                    <h5 style={{textAlign:"center"}}>Page {chapterInfo.currentPage+1}</h5>
-                    :
                     <a 
                     className="modern-reader-next"
-                    href={this.state.hasNextChapter?`/${comicName}/${chapterInfo.chapterId+1}/${0}`:`/${comicName}/`}>
-                        <h5 style={{textAlign:'center'}}>
-                            {this.state.hasNextChapter?'Next Chapter':`${chapterInfo.comicName} Overview`}
-                            </h5></a>
-                }
+                    href={this.state.hasNextChapter?`/${comicName}/${chapterInfo.chapterId+1}/${0}`:`/${comicName}-chapters/`}>
+                        {this.state.hasNextChapter?'Next >':`${chapterInfo.comicName} Overview`}
+                    </a>
                 
-                <ul className="support-links">
-                    <li><button className="reader-toggle btn" onClick={()=>{this.setState({classicView:!this.state.classicView})}}>Change View</button></li>
-                    <li><a className="btn" href="https://www.instagram.com/ezeas123/">Follow Me on Instagram!</a></li>
-                </ul>
+                    <a className="btn ig-btn" href="https://www.instagram.com/ezeas123/" target='_blank'><img src={Instagram}></img></a>
+                <button className={this.state.togglePullOutMenu?'togglePullOut':'togglePullOut open-menu'} onClick={()=>{this.setState({togglePullOutMenu: !this.state.togglePullOutMenu})}}>{'<'}</button>
             </div>
         )
     }
