@@ -287,6 +287,7 @@ Reader Styles
 
 .reader{
   border-radius: 5px;
+  background: #1c1b1c;
 }
 
 .reader a {
@@ -302,29 +303,33 @@ Reader Styles
   justify-content: center;
 }
 
-.reader-image img {
-  border: solid 5px #1d1d1d;
-  border-radius: 5px;
-}
 .reader-title-div{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: .5em;
+  padding:2rem 1rem;
   position: relative;
-  background: #1d1d1d;
-  border-radius: 5px 5px 0 0;
+  background: #1c1b1c;
   color: #EDEAE5;
+  max-width: 950px;
+  margin:0 auto;
+}
+
+.reader img{
+  max-width: 950px;
+}
+
+.reader-comic-title{
+  font-size: 1.25rem;
+  font-style: normal;
+  font-style: oblique;
+  margin-bottom: .5rem;
+  display: inline-block;
 }
 
 .reader-title-div h5{
   margin:0;
   padding: 1em;
   text-align: center;
-}
-
-.reader-comic-title{
-  font-style: italic;
 }
 
 .reader-chapter-title:hover,
@@ -340,7 +345,7 @@ Reader Styles
   flex-direction: column;
 }
 
-.modern-reader-next, .reader-toggle{
+/* .modern-reader-next, .reader-toggle{
   display:block;
   margin:.25rem auto;
   border-radius: 5px;
@@ -348,7 +353,7 @@ Reader Styles
   width:fit-content;
   background: #2e8bf5;
   color:#fff;
-}
+} */
 
 .modern-reader-next h5{
   color:#fff;
@@ -361,15 +366,18 @@ Reader Styles
   margin: 0;
   padding: 0;
   width:100%;
-  background: #1d1d1d;
+  max-width: 600px;
+  background: #1C1B1C;
   color: #EDEAE5;
-  border-radius: 0 0 5px 5px;
 }
 
 .collapse-list li{
   box-sizing:border-box;
   margin: 0;
-  border-top:solid 1px #EDEAE5;
+  border-left: double 4px #EDEAE5;
+  border-right: double 4px #EDEAE5;
+  border-bottom: double 4px #EDEAE5;
+
 } 
 
 .list-closed{
@@ -381,6 +389,52 @@ Reader Styles
 .list-open{
   transition:ease .5s all;
 }
+
+.chapter-dropdown{
+  width:100%;
+  position: relative;
+}
+
+.chapter-dropdown-button{
+  border:solid 2px #EDEAE5;
+  display: flex;
+  width:100%;
+  max-width: 600px;
+}
+.chapter-dropdown-button:hover{
+  cursor: pointer;
+}
+
+.reader-chapter-title{
+  font-size:2rem;
+  font-family: 'Staatliches',sans-serif;
+  font-weight: normal;
+  margin:0;
+  width:90%;
+  padding: .25rem .5rem;
+}
+
+.chapter-dropdown-button span{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: 'Staatliches',sans-serif;
+  border-left: solid 2px #EDEAE5;
+  background-color: rgb(237, 234, 229, .2);
+  width: 10%;
+  text-align: center;
+  transition:ease-in-out .2s all;
+}
+
+.chapter-dropdown-button span:hover{
+  background-color: rgb(237, 234, 229);
+  color:#000;
+  transition:ease-in-out .2s all;
+}
+
+/* PULL-OUT-MENU STYLES */
 
 .pull-out-menu{
   background: #1C1B1C;
@@ -439,17 +493,55 @@ Reader Styles
   font-size:1.25rem;
   color:#EDEAE5;
   border:none;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   background-color: #1C1B1C;
   opacity: .7;
   transition: ease-in-out .2s all;
 }
 
+.togglePullOut:hover{
+  cursor: pointer;
+  opacity: 1;
+  padding: .25rem 1rem .25rem .25rem;
+}
+
 .open-menu{
   transform: rotate(180deg);
+  border-radius: 0px 5px 5px 0;
   transition: ease-in-out .2s all;
 }
 
+.open-menu:hover{
+  padding: .25rem .25rem .25rem 1rem;
+}
+
+.reader-header-buttons{
+  display: flex;
+  padding:1rem 0;
+}
+
+.cycle-btn,
+.modern-reader-next{
+  padding: .25rem .5rem;
+  margin-right: 1rem;
+  font-family: 'Staatliches',sans-serif;
+  background: #592ef5;
+  font-size: 1.5rem;
+  padding:.5rem 1rem;
+}
+
+.modern-reader-next{
+  margin: 0 auto;
+  display: block;
+  width:fit-content;
+  margin-top: 1rem;
+
+}
+.ig-btn{
+  margin:0 auto;
+  display: block;
+  width: fit-content;
+}
 /* 
 ~5#################################################################################
  BANNER STYLES 
@@ -1743,11 +1835,6 @@ background: rgb(237, 234, 229, .8);
   header ul a, .gallery-header li{
   border-bottom:none;
 }
-  
-  .collapse-list{
-      width:auto;
-
-  }
   
   .blog-preview-list{
     display: flex;
