@@ -35,11 +35,11 @@ const Layout = ({ children }) => (
             <ul className="footer-nav">
               <li className="footer-title">Navigation</li>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="blog">Blog</Link></li>
-              <li><Link to="comics">Comics</Link></li>
-              <li><Link to="heroine-rises"><i>Heroine Rises</i></Link></li>
-              <li><Link to="one-shots-chapters">One Shots</Link></li>
-              <li><Link to="about">About</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/comics">Comics</Link></li>
+              <li><Link to="/heroine-rises"><i>Heroine Rises</i></Link></li>
+              <li><Link to="/one-shots-chapters">One Shots</Link></li>
+              <li><Link to="/about">About</Link></li>
             </ul>
             <ul className="footer-contact">
                 <li className="footer-title">Contact</li>
