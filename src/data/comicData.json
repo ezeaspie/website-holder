@@ -168,6 +168,13 @@
         "description":"Juliette runs into Maxine Rubin on her day off, which makes Maxine more uncomfortable than she was before."
     },
     {
+        "comicId":1,
+        "chapter":12,
+        "pages": 3,
+        "title":"Sleep Habits",
+        "description":"What happens when Madeline and Maxine are forced to share a bed? Again?"
+    },
+    {
         "comicId":2,
         "chapter":0,
         "pages": 16,
