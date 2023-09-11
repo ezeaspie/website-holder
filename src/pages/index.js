@@ -68,25 +68,6 @@ class IndexPage extends Component {
 export default IndexPage
 
 export const query = graphql `query{
-  allContentfulGalleryItem {
-    edges {
-      node {
-        id
-        featured
-        creationDate
-        medium
-        title
-        image {
-          fluid {
-            ...GatsbyContentfulFluid_noBase64
-          }
-        }
-        description {
-          description
-        }
-      }
-    }
-  }
   allContentfulBlogPost(sort: {fields: publishDate, order: DESC}, limit: 5){
     edges {
       node {
