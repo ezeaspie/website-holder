@@ -1,0 +1,178 @@
+[
+  {
+    "url": "madeline-harbour",
+    "stats":{
+      "str": 4,
+      "chr": 8.5,
+      "agi": 8,
+      "ldr": 7,
+      "end": 5,
+      "int": 8.5
+    },
+    "physical":{
+      "name": "Madeline Lindsay Harbour",
+      "heightFt": 5,
+      "heightIn":9,
+      "eye": "Blue",
+      "hair": "Blonde",
+      "birthPlace":"Isle of Tranquility",
+      "birthday": "October 14",
+      "color": "ffc500",
+      "age":18
+    }
+  },
+  {
+    "url":"juliette-sandover",
+    "stats":{
+      "str": 7,
+      "chr": 4.5,
+      "agi": 6.5,
+      "ldr": 6,
+      "end": 9.5,
+      "int": 6.5
+    },
+    "physical":{
+      "name": "Juliette Anais Sandover",
+      "heightFt": 5,
+      "heightIn":10,
+      "eye": "Brown",
+      "hair": "Brown",
+      "birthPlace":"The Citadel",
+      "birthday": "January 3",
+      "color": "ba4848",
+      "age":19
+    }
+  },
+  {
+    "url":"julian-gaitan",
+    "stats":{
+      "str": 7.5,
+      "chr": 4,
+      "agi": 5,
+      "ldr": 5,
+      "end": 8,
+      "int": 7.5
+    },
+    "physical":{
+      "name": "Julian Gaitan Garcia",
+      "heightFt": 5,
+      "heightIn":11,
+      "eye": "Dark Brown",
+      "hair": "Brown",
+      "birthPlace":"La Noria",
+      "birthday": "November 4",
+      "color": "2473cc",
+      "age":18
+    }
+  },
+  {
+    "url":"maxine-rubin",
+    "stats":{
+      "str": 7.5,
+      "chr": 2,
+      "agi": 7,
+      "ldr": 7.5,
+      "end": 7,
+      "int": 6
+    },
+    "physical":{
+      "name": "Maxine Amelia Rubin",
+      "heightFt": 5,
+      "heightIn":7,
+      "eye": "Light Brown",
+      "hair": "Strawberry Blonde (dyed Red)",
+      "birthPlace":"Chantilly",
+      "birthday": "December 6",
+      "color":"f35336",
+      "age":18
+    }
+  },
+  {
+    "url":"clarissa-harbour",
+    "stats":{
+      "str": 4,
+      "chr": 6,
+      "agi": 7,
+      "ldr": 7,
+      "end": 2,
+      "int": 8.5
+    },
+    "physical":{
+      "name": "Clarissa Lane Harbour",
+      "heightFt": 5,
+      "heightIn":11,
+      "eye": "Blue",
+      "hair": "Platinum Blonde",
+      "birthPlace":"New Serenity",
+      "birthday": "February 4",
+      "color":"FFFF61",
+      "age":46
+    }
+  },
+  {
+    "url":"ada-lima",
+    "stats":{
+      "str": 5,
+      "chr": 10,
+      "agi": 4,
+      "ldr": 3,
+      "end": 5,
+      "int": 6
+    },
+    "physical":{
+      "name": "Ada Asier de Santos Lima Silva",
+      "heightFt": 6,
+      "heightIn":0,
+      "eye": "Brown",
+      "hair": "Dark Brown",
+      "birthPlace":"Order",
+      "birthday": "Febuary 23rd",
+      "age":38,
+      "color":"310a73"
+    }
+  },
+  {
+    "url":"maeve-colbrun",
+    "stats":{
+      "str": 5,
+      "chr": 7.5,
+      "agi": 7,
+      "ldr": 5,
+      "end": 6,
+      "int": 4
+    },
+    "physical":{
+      "name": "Maeve Colbrun-Lassiter",
+      "heightFt": 5,
+      "heightIn":2,
+      "eye": "Brown",
+      "hair": "Dark Brown",
+      "birthPlace":"Chantilly",
+      "birthday": "November 4th",
+      "age":14,
+      "color":"8B1953"
+    }
+  },
+  {
+    "url":"irene-lassiter",
+    "stats":{
+      "str": 8.5,
+      "chr": 2.5,
+      "agi": 8,
+      "ldr": 6,
+      "end": 7,
+      "int": 4
+    },
+    "physical":{
+      "name": "Irene Lassiter",
+      "heightFt": 5,
+      "heightIn":11,
+      "eye": "Brown",
+      "hair": "Black",
+      "birthPlace":"Serenity Heights",
+      "birthday": "January 1st",
+      "age":35,
+      "color":"2aba92"
+    }
+  }
+]

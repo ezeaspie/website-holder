@@ -3,16 +3,16 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `artist-website-v2`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Ezequiel Espinoza Diaz`,
+    siteUrl: `https://www.ezequielespinoza.com/`
   },
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "\u0016",
-      "spaceId": ""
+      "accessToken": "3WWA5dtWesvoyfpPBAtFhILqdSyjL5n34s5I_BNZTFI",
+      "spaceId": "cakqv6o97o8p"
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-google-gtag", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", {
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",

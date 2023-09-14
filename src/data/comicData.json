@@ -1,0 +1,205 @@
+[
+    {
+    "comicId":0,
+    "chapter":0,
+    "pages":25,
+    "title":"Small Time Detective",
+    "description":"Madeline Harbour confronts an answer sheet thief in her pursuit of the 'greater good'."
+    },
+    {
+        "comicId":0,
+        "chapter":1,
+        "pages":22,
+        "title":"To Become a Heroine",
+        "description":"Julian Gaitan talks to Madeline about taking their detective hobby to another level before facing off against an old advesary."
+    },
+    {
+        "comicId":0,
+        "chapter":2,
+        "pages": 17,
+        "title": "Sassy Steel",
+        "description": "Madeline treks through the Isle of Tranquility nieghborhood to meet up with the bold and sassy Juliette Sandover."
+    },
+    {
+        "comicId":0,
+        "chapter":3,
+        "pages":15,
+        "title":"Mother's Concerns",
+        "description":"Madeline confronts her mother, who is still reeling from a devastating loss some fifteen years ago."
+    },
+    {
+        "comicId":0,
+        "chapter":4,
+        "pages":17,
+        "title":"The First Case",
+        "description":"Madeline travels to the Palisades to meet Ada Lima, who has had her valuable ruby ring stolen from her home."
+    },
+    {
+        "comicId":0,
+        "chapter":5,
+        "pages": 17,
+        "title":"Ada, Robert, and the Ring",
+        "description":"Madeline meets Robert Silva - the husband of Ada Lima and gets more context on the Ring. Meanwhile, an argument brews over in the Isle of Tranquility."
+    },
+    {
+        "comicId":0,
+        "chapter":6,
+        "pages":19,
+        "title":"The Daughter of the NSPD",
+        "description":"Madeline's team reunites and discusses how to move forward with the Ring case, but the tools needed to conduct a forensic investigation are blocked by a fiery Maxine Rubin."
+    },
+    {
+        "comicId":0,
+        "chapter":7,
+        "pages":17,
+        "title":"All that Glitters",
+        "description": "Juliette and Julian learn about Irene's troubled past, while Madeline tries to outwit her mother and interview the local jeweler, Jamie Banks."
+    },
+    {
+        "comicId":0,
+        "chapter":8,
+        "pages":25,
+        "title":"Dangers of Serenity",
+        "description":"Julian visits Ada and Robert in the Palisades while Madeline and Juliette head to the location Jamie Banks gave them… only to come face to face with the nastier side of Northern Serenity."
+    },
+    {
+        "comicId":0,
+        "chapter":9,
+        "pages":17,
+        "title":"The Butterfly Child",
+        "description":"Madeline, Juliette, and Julian reunite at Grant Park to seek out Irene's daughter Maeve, hoping that the young butterfly chaser can lead them to the former Faccion woman."
+    },
+    {
+        "comicId":0,
+        "chapter":10,
+        "pages":22,
+        "title":"Smoke and Mirrors",
+        "description":"Maeve Colbrun-Lassiter explains the ins and outs of life in the Coastal Swamp until an unexpected visitor arrives to wreak havoc on the team."
+    },
+    {
+        "comicId":0,
+        "chapter":11,
+        "pages":6,
+        "title":"The Issue with Mothers",
+        "description": "Julian and Juliette argue over their leader's methods while Madeline tries to get info from Irene - until a certain visitor arrives."
+    },
+    {
+        "comicId":1,
+        "chapter":0,
+        "pages":3,
+        "title":"Maddie and Jules: The Not-So Dynamic Duo!",
+        "description":"Maddie is optimistic, priviliged, rich, and oh so naive. Jules is pessimistic, poor, and easily annoyed. Together, they form a not-so-dynamic duo that constantly argue over the smallest things."
+    },
+    {
+        "comicId":1,
+        "chapter":1,
+        "pages":3,
+        "title":"Maddie and Maxine",
+        "description":"Madeline and Maxine are forced to share a bed."
+    },
+    {
+        "comicId":1,
+        "chapter":2,
+        "pages":8,
+        "title":"Maxine : Disillusioned",
+        "description":"Intial chapter for 'Heroine Rises', in where Maxine Rubin of the NSPD is the main character. Maxine must rebuild her reuptation after constant failures and win back the trust of the NSPD's strict commisioner, James Vernon."
+    },
+    {
+        "comicId":1,
+        "chapter":3,
+        "pages":5,
+        "title":"The Art of Heroine Rises",
+        "description":"An archival project meant to catalog the various concepts and sketches of characters, settings, and objects from the world of 'Heroine Rises'."
+    },
+    {
+        "comicId":1,
+        "chapter":4,
+        "pages": 12,
+        "title": "Small-Time Detective - Original",
+        "description": "The original art for the first chapter of Heroine Rises. Originally released in December 2018."
+    },
+    {
+        "comicId":1,
+        "chapter":5,
+        "pages":12,
+        "title": "To Become a Heroine - Original",
+        "description": "Madeline and her friend Julian Gaitan discuss Madeline's dreams of becoming a heroine but come face to face with the dangers of Northern Serenity. Original Release January 2019."
+    },
+    {
+        "comicId":1,
+        "chapter":6,
+        "pages":13,
+        "title":"Sassy Steel - Original",
+        "description":"Madeline meets up with the sassy and tough Juliette Sandover, who needs some convincing to join Madeline's cause. Original Release February 2019."
+    },
+    {
+        "comicId":1,
+        "chapter":7,
+        "pages":13,
+        "title":"Mother's Concerns - Original",
+        "description":"Clarissa Harbour and her daughter Madeline are best friends - but constantly are at ends. Madeline tries to convince her mother to help - even if that means opening up old wounds."
+    },
+    {
+        "comicId":1,
+        "chapter":8,
+        "pages":17,
+        "title":"The First Case - Original",
+        "description":"Madeline travels to the Palisades to meet Ada Lima, who has had her valuable ruby ring stolen from her home. Original Release March 2019."
+    },
+    {
+        "comicId":1,
+        "chapter":9,
+        "pages": 17,
+        "title":"Ada, Robert, and the Ring - Original",
+        "description":"Madeline meets Robert Silva - the wealthy and arrogant husband of Ada Lima and gets access to important evidence. Meanwhile, a argument brews over in the Isle of Tranqulity. Original Release April 2019."
+    },
+    {
+        "comicId":1,
+        "chapter":10,
+        "pages":21,
+        "title":"The Daughter of the NSPD - Original",
+        "description":"In an effort to expand what little evidence and information she has to try to solve the case, Madeline sends Juliette and Julian to the NSPD to get help but a fiery figure in Maxine Rubin stands in their way."
+    },
+    {
+        "comicId":1,
+        "chapter":11,
+        "pages": 7,
+        "title":"Isolated Fears",
+        "description":"Juliette runs into Maxine Rubin on her day off, which makes Maxine more uncomfortable than she was before."
+    },
+    {
+        "comicId":1,
+        "chapter":12,
+        "pages": 3,
+        "title":"Sleep Habits",
+        "description":"What happens when Madeline and Maxine are forced to share a bed? Again?"
+    },
+    {
+        "comicId":1,
+        "chapter":13,
+        "pages":23,
+        "title":"Hearts Like Ours",
+        "description":"Juliette and Maxine find themselves in a shopping mall and Juliette tries to make Maxine happy, but can she do that before Maxine pushes her away for good?"
+    },
+    {
+        "comicId":2,
+        "chapter":0,
+        "pages": 16,
+        "title":"Kindling",
+        "description":"Maxine Rubin and Damien Schmidt take on a mid-tier criminal in Yuri Maximillian and try to uncover why this random criminal has access to vast resources."
+    },
+    {
+        "comicId":2,
+        "chapter":1,
+        "pages":23,
+        "title":"Snuffed",
+        "description":"After arresting Yuri Maximillian, Maxine and Damien are put on mundane patrols meant to punish them for being effective officers. Maxine begins to question whether the NSPD's 'False Peace' is worth ceding so much power to the gangs."
+    },
+    {
+        "comicId":2,
+        "chapter":2,
+        "pages":28,
+        "title":"Embers",
+        "description":"Maxine and Damien must reconcile their relationship after a young girl is kidnapped by the same man who killed Maxine's mother."
+    }
+]
