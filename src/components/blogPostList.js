@@ -37,8 +37,18 @@ const BlogPostList = ({children, data}) => {
     },
   }
 
+  const selectFirstParagraph = (rawData) => {
+    let parsedData = JSON.parse(rawData.content.raw);
+    console.log(parsedData);
+    const firstParagraph = parsedData.content[0];
+    console.log(firstParagraph);
+    let paragraphObject = {raw: JSON.stringify(firstParagraph)};
+    console.log(paragraphObject);
+    return paragraphObject;
+  }
+
   return (
-    <h1>
+    <div>
         {blogPostData.map((blogPost,i)=>{
             const image = getImage(blogPost.coverImage);
             return(
@@ -48,15 +58,14 @@ const BlogPostList = ({children, data}) => {
                     <div className='blog-preview-content'>
                         <h5 className='blog-preview-title'>{blogPost.category + ":" + blogPost.title}</h5>
                         <h6>{blogPost.publishDate}</h6>
-                        <p>Blah blah blah blah</p>
-                        {/* <div>{renderRichText(blogPost.content, options)}</div> */}
+                        {<div>{renderRichText(selectFirstParagraph(blogPost), options)}</div>}
                     </div>
                 </Link>
                 </div>
             )
         })}
 
-    </h1>
+    </div>
   )
 }
 
