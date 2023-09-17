@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import Layout from "../components/layout"
 import BlogPostList from "../components/blogPostList"
 import comicData from '../data/comicData'
+import MainBanner from "../components/mainBanner"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,7 @@ const IndexPage = () => {
   `)
   return (
       <Layout>
+        <MainBanner/>
         <div className="container">
           <section className="blog-preview-list">
             <h4>News</h4>
