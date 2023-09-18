@@ -18,7 +18,7 @@ const IndexPage = () => {
             raw
           }
           coverImage {
-            gatsbyImage(fit: COVER, width: 500)
+            gatsbyImage(fit: CONTAIN, width: 1200)
           }
         }
       }

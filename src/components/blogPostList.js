@@ -47,16 +47,41 @@ const BlogPostList = ({children, data}) => {
     return paragraphObject;
   }
 
+  
+
   return (
-    <div>
+    <div className='blog-index-list'>
         {blogPostData.map((blogPost,i)=>{
+            const getColor = () => {
+              let check = blogPost.category;
+              if(check === "One Shots"){
+                console.log('pink');
+                return 'pink'
+              }
+              if(check === "Heroine Rises"){
+                return 'orange'
+              }
+              if(check === "Firestarter"){
+                return 'red'
+              }
+              if(check === "Gallery"){
+                return 'blue'
+              }
+              else{
+                return 'yellow'
+              }
+            }
+          
+            let color = getColor(); 
+            console.log(color);
             const image = getImage(blogPost.coverImage);
             return(
-                <div className="blog-preview" key={"blogpost"+i}>
+                <div className={"blog-index-preview " + color + "-transp"} key={"blogpost"+i}>
+                <GatsbyImage className="blog-index-preview-image" image={image} alt="image"/>
                 <Link to={`/blog/${blogPost.slug}`}>
-                    <GatsbyImage className="blog-preview-image" image={image} alt="image"/>
-                    <div className='blog-preview-content'>
-                        <h5 className='blog-preview-title'>{blogPost.category + ":" + blogPost.title}</h5>
+                    <div className='blog-index-preview-content'>
+                      <h5 className={'banner-category ' + color + ' blog-index-preview-category'}>{blogPost.category}</h5>
+                        <h5 className='blog-index-preview-title'>{blogPost.title}</h5>
                         <h6>{blogPost.publishDate}</h6>
                         {<div>{renderRichText(selectFirstParagraph(blogPost), options)}</div>}
                     </div>
