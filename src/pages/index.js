@@ -24,31 +24,29 @@ const IndexPage = () => {
       }
     }
   `)
+
   return (
       <Layout>
         <MainBanner/>
         <div className="container">
           <section className="blog-preview-list">
-            <h4>News</h4>
             <BlogPostList data={data}></BlogPostList>
           </section>
-          <section className="comic-index">
-            <h4 className="main-header">Comics</h4>
-            <div className="container">
+          <section className="comics-preview-list">
               {
                 comicData.map((comic)=>{
                   return(
-                    <Link className="comic-index-preview" to={comic.secondUrl} key={comic.title}>
-                      <div className="comic-index-preview-top">
-                        <div className="comic-index-preview-image" style={{backgroundImage:`url(${comic.image})`}}></div>
-                        <p className="comic-index-preview-tagline">{comic.tagline}</p>
+                    <div className="comic-preview-item">
+                      <Link className="comic-preview-link-full" to={comic.secondUrl} key={comic.title}></Link>
+                      <img src={comic.image} alt={comic.title}/>
+                      <div className="comic-preview-content">
+                        <p className="comic-preview-tagline">{comic.tagline}</p>
+                        <Link className="comic-preview-link" to={comic.secondUrl} key={comic.title}>{'Read Now >>'}</Link>
                       </div>
-                      <h4 className={comic.color + "-banner"}>{comic.title}</h4>
-                    </Link>
+                    </div>
                   )
                 })
               }
-            </div>
           </section>
         </div>
       </Layout>

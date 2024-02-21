@@ -36,25 +36,27 @@ export default ( data ) => {
           onClick={()=>setOverlayVisible(false)}>
             X
           </button>
-        <GatsbyImage
+        {/* <GatsbyImage
         image={getImage(galleryItem.imageCollectionData[selectedItemId].image.gatsbyImage)}
         className="gallery-overlay-image"
-        ></GatsbyImage>
+        ></GatsbyImage> */}
       </div>
 
 
-        <div className="gallery-group-header">
+        {/* <div className="gallery-group-header">
           <GatsbyImage image={galleryItem.coverImage.gatsbyImage} alt={galleryItem.title + " by Ezequiel Espinoza Diaz"}></GatsbyImage>
           <h1>{galleryItem.title}</h1>
           <h2>{galleryItem.subtitle}</h2>
-        </div>
+        </div> */}
         <div className="gallery-group-grid">
           {galleryItem.imageCollectionData.map((collectionItem,i) =>{
             return(
               <Link
               onClick={handleClick}
               to={"/gallery/" + convertToSlug(collectionItem.title)}
-              className="gallery-group-item">
+              className="gallery-group-item"
+              title={collectionItem.title}
+              >
                 <GatsbyImage
                 id={i}
                 class="gallery-group-image"

@@ -1,11 +1,13 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery} from "gatsby"
 import Layout from "../components/layout"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image"
 import HeroImage1 from '../images/site/firestarter/heroImage1.jpg'
 import HeroImage2 from '../images/site/firestarter/heroimage2.jpg'
 import HeroImage3 from '../images/site/firestarter/heroimage3.jpg'
 import HeroImage4 from '../images/site/firestarter/heroimage4.jpg'
+import HeroImage5 from '../images/site/firestarter/heroimage5.jpg'
+
 import MaxineImage from '../images/site/Maxine0.jpg'
 import DamienImage from '../images/site/firestarter/damien.png'
 
@@ -18,9 +20,10 @@ import Inferno from '../images/site/firestarter/6.jpg'
 import Cinders from '../images/site/firestarter/7.jpg'
 
 import FireStarterLogo from '../images/site/firestarter/fsLogo1.png'
+import MaxineFooterImage from '../images/site/firestarter/heroImageFooter.jpg'
 
 
-const heroImages = [HeroImage1,HeroImage2,HeroImage3,HeroImage4];
+const heroImages = [HeroImage5];
 
 class ChapterTile {
   constructor(title, image, isAvaliable, link=null){
@@ -84,13 +87,53 @@ const characterTiles = [
 ];
 console.log(chapterTiles);
 
-const selectedImage = heroImages[Math.floor(Math.random()*heroImages.length)];
-
 const FireStarter = () => {
+  const raw = useStaticQuery(graphql`
+  query{
+      allContentfulFireStarterBannerImageContent {
+        nodes {
+          smallImages {
+            gatsbyImage(fit: COVER, width: 500)
+          }
+          largeImages {
+            gatsbyImage(fit: COVER, width: 1920)
+          }
+        }
+      }
+    }
+  `);
+  const bannerInfo = raw.allContentfulFireStarterBannerImageContent.nodes[0];
+
+  const createArtDirection = (largeImages, smallImages) => {
+    let imageCollection = largeImages.map((image, i)=>{
+      let imageObj = {largeImage: image, smallImage: smallImages[i]};
+
+      const artDirection = withArtDirection(getImage(imageObj.largeImage), [
+        {
+          media: "(max-width: 650px)",
+          image: getImage(imageObj.smallImage),
+        },
+      ])
+      return artDirection
+    })
+
+
+    return imageCollection
+  }
+  
+  
+
+
+const images = createArtDirection(bannerInfo.largeImages, bannerInfo.smallImages);
+const selectedImage = images[Math.floor(Math.random()*images.length)];
+console.log(selectedImage);
+
+console.log(images);
   return (
       <Layout>
           <div>
             <section className="hero-banner">
+            <GatsbyImage className="banner-image" image={selectedImage}/>
               <div className="hero-banner-info">
                 <img className="fs-logo" src={FireStarterLogo}></img>
                 <div className="hero-banner-flavor-text">
@@ -106,13 +149,19 @@ const FireStarter = () => {
                 </div>
                 <button className="hero-banner-btn"><Link to="/firestarter/0">{"Read Now >"}</Link></button>
               </div>
-              <div className="fs-hero-image" style={{backgroundImage:`url(${selectedImage})`}}></div>
-              {/* <img className="fs-hero-image" src={selectedImage}/> */}
+              {/* <div className="fs-hero-image" style={{backgroundImage:`url(${selectedImage})`}}></div> */}
             </section>
-            <section className="firestarter-info">
-            <h1>FireStarter</h1>
-            <p>More About FireStarter</p>
+            <section className="firestarter-info introduction">
+              <div className="intro-header">
+              <h1>FireStarter</h1>
+              <ul className="hub-nav">
+                <li>Jump to:</li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Comic</a></li>
+              </ul>
+              </div>
             <h2>Maxine Rubin is a police officer who has one goal in mind: Getting revenge on the killer of her mother. If that means isolating herself from friends, spitting in the face of the police commanders telling her to stay in line, or becoming the spark that starts a bloody conflict between the police and the ruthless gang known as the Rust Bandits - so be it.</h2>
+            <p id="tagline-trigger">More About FireStarter</p>
             <p>
             <i>FireStarter</i> tells the story of <b>Maxine Amelia Rubin</b>, a young police officer who's personal vendetta against the criminals of Northern Serenity has led her to shake up the delicate 'false peace' between the NSPD and the gangs despite the consequences.              
             </p>
@@ -136,6 +185,15 @@ const FireStarter = () => {
                   return tile.createTile(i);
                 })}
               </div>
+            </section>
+            <section className="firestarter-footer">
+              <div className="firestarter-footer-info">
+                <h2>FIRESTARTER</h2>
+                <h3>By Ezequiel Espinoza Diaz</h3>
+                <a href="#">Link1</a>
+                <a href="#">Link2</a>
+              </div>
+              <img className="firestarter-footer-img" src={MaxineFooterImage}/>
             </section>
           </div>
       </Layout>

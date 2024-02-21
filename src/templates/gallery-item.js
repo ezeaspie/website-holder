@@ -12,9 +12,11 @@ export default ( data ) => {
         className="gallery-showcase-image"
         image={getImage(galleryItem.image.gatsbyImage)}
         alt={galleryItem.title}></GatsbyImage>
-        <h1>{galleryItem.title}</h1>
-        <h2>{galleryItem.medium}</h2>
-        <p>{galleryItem.description.description}</p>
+        <div className="gallery-showcase-info">
+          <h1>{galleryItem.title}</h1>
+          <h2>{galleryItem.medium}</h2>
+          <p>{galleryItem.description.description}</p>
+        </div>
       </div>
       
     </Layout>

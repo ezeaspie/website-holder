@@ -75,6 +75,7 @@ const BlogPostList = ({children, data}) => {
             let color = getColor(); 
             console.log(color);
             const image = getImage(blogPost.coverImage);
+            const date = new Date(blogPost.publishDate).toLocaleDateString();
             return(
                 <div className={"blog-index-preview " + color + "-transp"} key={"blogpost"+i}>
                 <GatsbyImage className="blog-index-preview-image" image={image} alt="image"/>
@@ -82,8 +83,8 @@ const BlogPostList = ({children, data}) => {
                     <div className='blog-index-preview-content'>
                       <h5 className={'banner-category ' + color + ' blog-index-preview-category'}>{blogPost.category}</h5>
                         <h5 className='blog-index-preview-title'>{blogPost.title}</h5>
-                        <h6>{blogPost.publishDate}</h6>
-                        {<div>{renderRichText(selectFirstParagraph(blogPost), options)}</div>}
+                        <h6 className='blog-index-preview-date'>{date}</h6>
+                        {<div className='blog-index-preview-description'>{renderRichText(selectFirstParagraph(blogPost), options)}</div>}
                     </div>
                 </Link>
                 </div>

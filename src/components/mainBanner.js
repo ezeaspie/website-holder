@@ -27,20 +27,21 @@ const MainBanner = () => {
     
     const images = withArtDirection(getImage(bannerInfo.largeImage), [
         {
-          media: "(max-width: 650px)",
+          media: "(max-width: 767.98px)",
           image: getImage(bannerInfo.smallImage),
         },
       ])
 
+      console.log(images);
     return(
         <div className='main-banner'>
             {/* <img src={heroImage}></img> */}
             <GatsbyImage className="banner-image" image={images}/>
             <div className="banner-content">
                     <h5 className={'banner-category ' + bannerInfo.color}>{bannerInfo.accentText}</h5>
-                      <h2 className={"banner-headline " + 'blue' + "-banner"}>{bannerInfo.title}</h2>
+                      <h2 className={"banner-headline " + 'pink' + "-banner"}>{bannerInfo.title}</h2>
                       <h3 className="banner-subhead">{bannerInfo.subtitle}</h3>
-                        <Link to="/" className='blog-link-button blue'>{"Read Now  >>"}</Link>
+                        <Link to="/" className='blog-link-button pink'>{"Read Now  >>"}</Link>
                   </div>
         </div>
     )

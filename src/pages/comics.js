@@ -9,9 +9,34 @@ const ComicPage = () => {
     let colorClass = colorClassList[0];
     return(
         <Layout>
-            <div className="container">
                 <div className="comic-list">
-                {comicData.map((comic, i)=>{
+                    {comicData.map((comic, i) =>{
+                        return(
+                            <div>
+                                <img src={comic.coverImage} alt={comic.title}></img>
+                                <Link to={'/' + comic.secondUrl} key={i}>
+                                {comic.title}
+                                </Link>
+                                <div>
+                                    <h5>{comic.title}</h5>
+                                    <p>{comic.excerpt}</p>
+                                </div> 
+                            </div>
+                        //     <div className="comic-preview blog-preview" key={i}>
+                        // <Link to={'/' + comic.secondUrl} key={i}>
+                        // <div 
+                        // className="comic-preview-image"
+                        // style={{backgroundImage: `url(${comic.coverImage})`}}>
+                        // </div>       
+                        // <div className="blog-preview-content comic-preview-content">
+                        //     <h5 className={'comic-preview-title ' + colorClass + '-banner'}>{comic.title}</h5>
+                        //     <p>{comic.excerpt}</p>
+                        // </div> 
+                        // </Link>           
+                        // </div>
+                        )
+                    })}
+                {/* {comicData.map((comic, i)=>{
                         if(comic.title === "Heroine Rises"){
                         colorClass = colorClassList[0];
                         }
@@ -35,9 +60,8 @@ const ComicPage = () => {
                         </Link>           
                         </div>
                     )
-                })}
+                })} */}
                 </div>
-            </div>
         </Layout>
     )
 }

@@ -64,29 +64,30 @@ const GalleryPage = () => {
                     )
                 })}
             </div> */}
-            <div className="gallery-group">
+            <section className="gallery-group-list">
                 {groupData.map((entry)=>{
                     console.log(entry);
                     return(
-                        <Link className="gallery-group-link" to={convertToSlug(entry.title)}>
                         <div className="gallery-group-tile">
-                             <GatsbyImage
-                             className="gallery-group-tile-image"
-                             image={getImage(entry.coverImage.gatsbyImage)}
-                             layout="fixed"
-                             aspectRatio={16/9}
-                            alt={"hi"}
-                            />
-                            <div className="gallery-group-tile-title">
-                              <h2>{entry.title}</h2>
-                              <h3>{entry.subtitle}</h3>
-                            </div>
-                            
+            
+
+                        <GatsbyImage
+                        className="gallery-group-tile-image"
+                        image={getImage(entry.coverImage.gatsbyImage)}
+                        layout="fixed"
+                        aspectRatio={16/9}
+                        alt={"hi"}
+                        />
+
+                        <Link className="gallery-group-tile-title" to={convertToSlug(entry.title)}>
+                          <h2>{entry.title}</h2>
+                          <h3>{entry.subtitle}</h3>
+                          </Link>
+
                         </div>
-                        </Link>
                     )
                 })}
-            </div>
+            </section>
         </Layout>
     )
 }

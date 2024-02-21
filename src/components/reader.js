@@ -4,6 +4,8 @@ import comicData from '../data/comicData';
 import PullOutMenu from './pullOutMenu';
 import Instagram from '../images/site/instagram.png';
 
+import { FaAngleDoubleDown } from "react-icons/fa";
+
 class Reader extends Component {
     constructor(props){
         super(props);
@@ -124,19 +126,19 @@ class Reader extends Component {
         return (
             <div className="reader">
 
-                <PullOutMenu isClosed={this.state.togglePullOutMenu} chapterArray = {chapterInfo.comicData} comicName={comicName}/>
-                <div className="reader-title-div">
+                {/* <PullOutMenu isClosed={this.state.togglePullOutMenu} chapterArray = {chapterInfo.comicData} comicName={comicName}/> */}
+                <div className="reader-info-main">
                     <div className='reader-header-info'>
-                            <h1 className='reader-comic-title'>{chapterInfo.comicName + " Chapter " + currentChapter}</h1>
+                        <h1 className='reader-comic-title'>{chapterInfo.comicName + " Chapter " + currentChapter}</h1>
                         <div className="chapter-dropdown">
-                            <div
+                            <button
                             className='chapter-dropdown-button'
-                            onFocus={()=>{this.setState({isChapterDropdown: true})}}
-                            onBlur={()=>{this.setState({isChapterDropdown:false})}}
                             onClick={()=>{this.setState({isChapterDropdown:!this.state.isChapterDropdown})}}>
-                                <h2 className='reader-chapter-title'>{chapterInfo.chapterTitle}</h2>
-                                <span>V</span>
-                            </div>
+                                {chapterInfo.chapterTitle}
+                                <FaAngleDoubleDown 
+                                className=
+                                {this.state.isChapterDropdown?"dropdown-icon dropdown-icon-open":"dropdown-icon dropdown-icon-closed"}/>
+                            </button>
                             
                             <ul 
                             className={this.state.isChapterDropdown?"list-open collapse-list":"list-closed collapse-list"}
@@ -152,7 +154,7 @@ class Reader extends Component {
                                     <Link 
                                     key={`chapter${i}`}
                                     to={`/${comicName}/${chapter.chapter}`}>
-                                    <h5>{`${chapter.chapter+1}. ${chapter.title}`}</h5>
+                                    {`${chapter.chapter+1}. ${chapter.title}`}
                                     </Link>
                                     </li>
                                     )
@@ -166,26 +168,22 @@ class Reader extends Component {
                         {checkForNextChapter()}
                     </div>
                 </div>
-
-                <div className="reader-image">
                 
-                        <ul className="reader-image-list">
-                            {
-                              imageCollection.map((image)=>{
-                                  return image;
-                              })  
-                            }
-                        </ul>
-                    
-                </div>
-                    <a 
-                    className="modern-reader-next"
-                    href={this.state.hasNextChapter?`/${comicName}/${chapterInfo.chapterId+1}`:`/${comicName}-chapters/`}>
-                        {this.state.hasNextChapter?'Next >':`${chapterInfo.comicName} Overview`}
-                    </a>
-                
-                    <a className="btn ig-btn" href="https://www.instagram.com/ezeas123/" target='_blank'><img src={Instagram}></img></a>
-                <button className={this.state.togglePullOutMenu?'togglePullOut':'togglePullOut open-menu'} onClick={()=>{this.setState({togglePullOutMenu: !this.state.togglePullOutMenu})}}>{'<'}</button>
+                <ul className="reader-image-list">
+                    {
+                        imageCollection.map((image)=>{
+                            return image;
+                        })  
+                    }
+                </ul>        
+                <a 
+                className="reader-next-button"
+                href={this.state.hasNextChapter?`/${comicName}/${chapterInfo.chapterId+1}`:`/${comicName}-chapters/`}>
+                    {this.state.hasNextChapter?'Next >':`${chapterInfo.comicName} Overview`}
+                </a>
+            
+                {/* <a className="btn ig-btn" href="https://www.instagram.com/ezeas123/" target='_blank'><img src={Instagram}></img></a> */}
+                {/* <button className={this.state.togglePullOutMenu?'togglePullOut':'togglePullOut open-menu'} onClick={()=>{this.setState({togglePullOutMenu: !this.state.togglePullOutMenu})}}>{'<'}</button> */}
             </div>
         )
     }
