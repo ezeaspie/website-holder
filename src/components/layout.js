@@ -29,6 +29,7 @@ const Layout = ({ pageTitle, children }) => {
             padding: `0`,
             paddingTop: 0,
           }}
+          className='main-container'
         >
           {children}
           <footer>

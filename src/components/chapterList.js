@@ -15,26 +15,9 @@ class ChapterList extends Component{
       'firestarter',
     ];
     return(
-      <div className="cl-container">
-        <div className='comic-overview-container'>
-      <div className="comic-overview blog-preview">
-        <div 
-        className="blog-preview-image"
-        style={{backgroundImage: `url(${comicMeta.coverImage})`}}>
-        </div>    
-        <div className="blog-preview-content">
-          <h2 className='comic-overview-title'>{comicMeta.title}</h2>
-          <div className={comicMeta.color + "-banner comic-overview-banner"}></div>
-          <p>
-            {comicMeta.synopsis}
-          </p>
-        </div>
-      </div>
-      </div>
-      <div className="heroine-rises">
-
-      <div className="chapter-list-div container">
-      <h2>{comicMeta.title} Chapters</h2>
+      <div className='black-wrapper-100'>
+      <div className="chapter-preview-list">
+      <h1>List of {comicMeta.title} Chapters</h1>
           {
             comicInfo.map((chapter)=>{
               return (
@@ -48,8 +31,8 @@ class ChapterList extends Component{
             })
           }
       </div>
-  </div>
       </div>
+
     )
   }
 }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'gatsby';
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 class ChapterPreview extends Component {
     constructor(props){
@@ -11,29 +12,16 @@ class ChapterPreview extends Component {
     render(){
         let chapter = this.props.chapter;
         return(
-            <div className="chapter-preview">
-                    <div className="chapter-preview-main">
+            <Link to={"/"+this.props.link} className="chapter-preview">
                         <div className='chapter-preview-info'>
-                            <h4>{this.props.title} {chapter.chapter+1}</h4>
-                            <h3>{chapter.title}</h3>
+                            <h2>{this.props.title} Chapter {chapter.chapter+1}</h2>
+                            <h4>{chapter.title}</h4>
+                            <p className="chapter-preview-desc">
+                            {/* {chapter.description} */}
+                            </p>  
                         </div>
-                        
-                        <div className="btn-set">
-                        <button 
-                        onClick={()=>this.setState({descIsShown:!this.state.descIsShown})}
-                        className={"btn btn-info"}>?</button>
-                        
-                        <Link to={"/"+this.props.link}>
-                        <button className={"btn " + this.props.color}>
-                        Read Now
-                        </button>
-                        </Link>
-                        </div>
-                    </div>
-                    <div className={this.state.descIsShown?"chapter-preview-desc shown":"chapter-preview-desc"}>
-                        {chapter.description}
-                    </div>
-            </div>
+                        <FaAngleDoubleRight />
+            </Link>
         )
     }
 }

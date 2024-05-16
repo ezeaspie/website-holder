@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => (
   <header>
     <div className="header-title-container">
       <Link className='header-homepage-link' to="/">
-      <h1>{siteTitle}</h1>
+      <h2>{siteTitle}</h2>
       <p>a creative archive</p>
       </Link>
     </div> 

@@ -1,12 +1,15 @@
 import heroineRisesImage from '../images/site/comicImages/heroineRisesThumbnail.jpg';
+import heroineRisesCoverImage from '../images/site/heroineRisesCover.jpg';
+import heroineRisesHero from '../images/site/heroineRisesHero.jpg';
+
 import SweetWaterImage from '../images/site/comicImages/oneShotsThumbnail.jpg';
 
-import OneShotCover from '../images/site/OneShotsCover.jpg';
-import heroineRisesCoverImage from '../images/site/HeroineRisesCover.jpg';
+import OneShotCover from '../images/site/oneShotsCover.jpg';
+import oneShotsHero from '../images/site/oneShotsHero.jpg';
 
 import FireStarterCover from '../images/site/FireStarterCover.jpg';
 import FireStarterThumbnail from '../images/site/comicImages/fireStarterThumbnail.jpg';
-
+import FireStarterHero from '../images/site/fireStarterHero.jpg';
 
 import React from 'react';
 
@@ -15,10 +18,11 @@ let comicData = [
       title:"Heroine Rises",
       id:0,
       url:"heroine-rises",
-      secondUrl:"heroine-rises-chapters",
+      secondUrl:"heroine-rises/chapters",
       color: 'orange',
       image: heroineRisesImage,
       coverImage: heroineRisesCoverImage,
+      heroImage: heroineRisesHero,
       showImages:false,
       synopsis:
       <div>
@@ -32,10 +36,11 @@ let comicData = [
       title:"One Shots",
       id:1,
       url: "one-shots",
-      secondUrl:"one-shots-chapters",
+      secondUrl:"one-shots/chapters",
       color:'pink',
       image: SweetWaterImage,
       coverImage:OneShotCover,
+      heroImage:oneShotsHero,
       showImages:true,
       synopsis: 
       <div>
@@ -48,10 +53,11 @@ let comicData = [
       title:"FireStarter",
       id:2,
       url: "firestarter",
-      secondUrl:"firestarter-chapters",
+      secondUrl:"firestarter/chapters",
       color:'red',
       image: FireStarterThumbnail,
       coverImage: FireStarterCover,
+      heroImage:FireStarterHero,
       showImages: true,
       synopsis:
       <div>

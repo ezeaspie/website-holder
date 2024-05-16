@@ -38,7 +38,7 @@ const GalleryPage = () => {
         }
       }
       coverImage {
-        gatsbyImage(fit: COVER, width: 1000)
+        gatsbyImage(fit: COVER, width: 1920)
       }
     }
   }

@@ -66,7 +66,6 @@ exports.createPages = ({ graphql, actions }) => {
       if(filteredData.length > 20){
         filteredData = filteredData.slice(-20);
       }
-  
       filteredData.reverse();
   
     let pathName = `${comicId}/${chapterId}`
@@ -103,7 +102,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
 
       createPage({
-        path: `heroine-rises-chapters`,
+        path: `heroine-rises/chapters`,
         component:path.resolve(`./src/templates/comic-overview.js`),
         context:{
           comicData: harbourComicFiltered,
@@ -112,7 +111,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       })
       createPage({
-        path:'one-shots-chapters',
+        path:'one-shots/chapters',
         component:path.resolve(`./src/templates/comic-overview.js`),
         context:{
           comicData:oneShotsFiltered,
@@ -121,7 +120,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       })
       createPage({
-        path:'firestarter-chapters',
+        path:'firestarter/chapters',
         component:path.resolve(`./src/templates/comic-overview.js`),
         context:{
           comicData:fireStarterFiltered,
