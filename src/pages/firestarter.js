@@ -2,11 +2,6 @@ import * as React from "react"
 import { Link, graphql, useStaticQuery} from "gatsby"
 import Layout from "../components/layout"
 import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image"
-import HeroImage1 from '../images/site/firestarter/heroImage1.jpg'
-import HeroImage2 from '../images/site/firestarter/heroimage2.jpg'
-import HeroImage3 from '../images/site/firestarter/heroimage3.jpg'
-import HeroImage4 from '../images/site/firestarter/heroimage4.jpg'
-import HeroImage5 from '../images/site/firestarter/heroimage5.jpg'
 
 import MaxineImage from '../images/site/Maxine0.jpg'
 import DamienImage from '../images/site/firestarter/damienPortrait.jpg'
@@ -25,7 +20,6 @@ import FireStarterLogoWhite from '../images/site/firestarter/svg/fsMainLogoWhite
 import MaxineFooterImage from '../images/site/firestarter/footer-hero.jpg';
 
 
-const heroImages = [HeroImage5];
 
 class ChapterTile {
   constructor(title, image, isAvaliable, link=null){

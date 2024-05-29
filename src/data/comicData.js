@@ -1,10 +1,10 @@
 import heroineRisesImage from '../images/site/comicImages/heroineRisesThumbnail.jpg';
-import heroineRisesCoverImage from '../images/site/heroineRisesCover.jpg';
-import heroineRisesHero from '../images/site/heroineRisesHero.jpg';
+import heroineRisesCoverImage from '../images/site/HeroineRisesCover.jpg';
+import heroineRisesHero from '../images/site/eroineRisesHero.jpg';
 
 import SweetWaterImage from '../images/site/comicImages/oneShotsThumbnail.jpg';
 
-import OneShotCover from '../images/site/oneShotsCover.jpg';
+import OneShotCover from '../images/site/OneShotsCover.jpg';
 import oneShotsHero from '../images/site/oneShotsHero.jpg';
 
 import FireStarterCover from '../images/site/FireStarterCover.jpg';
