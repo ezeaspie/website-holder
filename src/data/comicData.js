@@ -1,6 +1,6 @@
 import heroineRisesImage from '../images/site/comicImages/heroineRisesThumbnail.jpg';
 import heroineRisesCoverImage from '../images/site/HeroineRisesCover.jpg';
-import heroineRisesHero from '../images/site/eroineRisesHero.jpg';
+import heroineRisesHero from '../images/site/HeroineRisesHero.jpg';
 
 import SweetWaterImage from '../images/site/comicImages/oneShotsThumbnail.jpg';
 
