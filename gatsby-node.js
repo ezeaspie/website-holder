@@ -34,7 +34,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   `)
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async function({ graphql, actions }) {
   const { createPage } = actions  
 
     // Create pages for each COMIC entry.
@@ -131,7 +131,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       const galleryTemplate = path.resolve(`src/templates/gallery-item.js`);
       const galleryGroupTemplate = path.resolve(`src/templates/gallery-group.js`);
-      const galleryItems = graphql(`
+      const galleryItems = await graphql(`
       {
         allContentfulGalleryItem {
           nodes {
@@ -171,7 +171,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       //Create galleryGroup Pages
       
-      const galleryGroups = graphql(`
+      const galleryGroups = await graphql(`
       {
         allContentfulGalleryCollectionItem {
           nodes {
