@@ -46,7 +46,7 @@ let comicData = [
       <div>
         <p>Every once in a while I make a comic that has nothing to do with any other series or places characters from other series in non-canon context. Or I just make some for fun or practice. Either way, those comics end up here: regular non-serialized standalone comics.</p>
       </div>,
-      excerpt: "Regular standalone comics that don't fall into another category.",
+      excerpt: "Regular standalone comics that don't fall into another category. From scrapped shorts to projects that never found a foothold, find them all here.",
       tagline: "A collection of non-serialized comics and standalone stories."
     },
     {

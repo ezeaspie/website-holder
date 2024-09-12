@@ -12,7 +12,8 @@ import Snuffed from '../images/site/firestarter/chapter tiles/chapter2.jpg'
 import Embers from '../images/site/firestarter/chapter tiles/chapter3.jpg'
 import Burns from '../images/site/firestarter/chapter tiles/chapter4.jpg'
 import Flames from '../images/site/firestarter/chapter tiles/chapter5.jpg'
-import Inferno from '../images/site/firestarter/chapter tiles/chapter6.jpg'
+import Heatwave from '../images/site/firestarter/chapter tiles/chapter6.jpg'
+import Inferno from '../images/site/firestarter/chapter tiles/chapter9.jpg'
 import Cinders from '../images/site/firestarter/chapter tiles/chapter7.jpg'
 
 import FireStarterLogo from '../images/site/firestarter/svg/fsMainLogoRed.svg';
@@ -32,7 +33,7 @@ class ChapterTile {
     let className = "fs-chapter";
     let chapterNumber = id + 1;
     if(!this.isAvaliable){
-      className="fs-chapter unavaliable"
+      className="fs-chapter unavailable"
     }
     return (
       <div className={className} key={id}>
@@ -71,10 +72,12 @@ const chapterTiles = [
   new ChapterTile("Kindling",Kindling,true,"/firestarter/0"),
   new ChapterTile("Snuffed",Snuffed,true,"/firestarter/1"),
   new ChapterTile("Embers",Embers,true,"/firestarter/2"),
-  new ChapterTile("Burns",Burns,false,"/firestarter/3"),
-  new ChapterTile("Flames",Flames,false,"/firestarter/4"),
-  new ChapterTile("Inferno",Inferno,false,"/firestarter/5"),
-  new ChapterTile("Cinders",Cinders,false,"/firestarter/6"),
+  new ChapterTile("Flames",Flames,true,"/firestarter/3"),
+  new ChapterTile("Burns",Burns,false,"/firestarter/4"),
+  new ChapterTile("HeatWave",Heatwave,false,"/firestarter/5"),
+  new ChapterTile("Inferno",Inferno,false,"/firestarter/6"),
+  new ChapterTile("Cinders",Cinders,false,"/firestarter/7"),
+
 ];
 
 const characterTiles = [

@@ -5,6 +5,7 @@ import {MARKS, INLINES, BLOCKS} from "@contentful/rich-text-types"
 import moment from 'moment';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import LinkIcon from '../images/site/link-white.svg';
 
 export default ({ data }) => {  
     const options = {
@@ -20,8 +21,13 @@ export default ({ data }) => {
        },
       },
     }
+
   
   const post = data.contentfulBlogPost;
+
+  const copyLink = () => {
+    navigator.clipboard.writeText("https://www.ezequielespinoza.com/blog/" + post.slug);
+  }
 
   const colorClassList = ['orange','pink','red','yellow','blue'];
   let colorClass = colorClassList[0];
@@ -49,14 +55,27 @@ export default ({ data }) => {
     return (
     <Layout>
       <div className="container blog-post-container">
-          <h2 className={"blog-title-category " + colorClass + "-banner"}>{post.category}</h2>
+          <h3 className={"blog-title-category " + colorClass}>{post.category}</h3>
           <h1 className="blog-title-main">{post.title}</h1>
-          <h2 className="blog-date">{moment(post.publishDate).format('MMMM DD YYYY')}</h2>
+          <h4 className="blog-date">{moment(post.publishDate).format('MMMM DD YYYY')}</h4>
           <GatsbyImage className="blog-main-img" image={coverImage} alt={"Cover Image"}/>        
           <div className="blog-main-div">
+            <section className="blog-main-social">
+              <h4>By Ezequiel Espinoza Diaz</h4>
+              <div className="blog-main-share">
+                <h4>Share :</h4>
+                <ul className="blog-main-share-links">
+                  <li>
+                    <img className="icon-link" onClick={copyLink} src={LinkIcon} height={30} width={30}></img>
+                    <div className="icon-tooltip">Link copied!</div>
+                  </li>
+                  
+                </ul>
+              </div>
+            </section>
           <div  className="blog-main-content">
             <div>{renderRichText(post.content, options)}</div>
-            <span className={"blog-main-footer " + colorClass + "-banner"}>-Ezequiel Espinoza Diaz</span>
+            <p className={"blog-signature"}>-Ezequiel Espinoza Diaz</p>
           </div>
           <Link to="/blog" className={"blog-link-button " + colorClass}>{`< Return to Blog Index`}</Link> 
           </div>      
@@ -68,6 +87,7 @@ export default ({ data }) => {
 export const query = graphql`  
 query($slug: String!) {   
   contentfulBlogPost ( slug: { eq: $slug }){
+    slug
     category
     content {
       raw

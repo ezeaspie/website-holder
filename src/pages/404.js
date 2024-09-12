@@ -1,5 +1,17 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import Layout from "../components/layout"
+
+
+import Maxine from '../images/site/404/ChibiMax-I.jpg';
+import MaxineII from '../images/site/404/ChibiMax-II.jpg';
+import Madeline from '../images/site/404/ChibiMad.jpg';
+import Juliette from '../images/site/404/ChibiJulie.jpg';
+import Damien from '../images/site/404/ChibiDam.jpg';
+import Julian from '../images/site/404/ChibiJulian.jpg';
+
+
 
 const pageStyles = {
   color: "#232129",
@@ -23,24 +35,46 @@ const codeStyles = {
   borderRadius: 4,
 }
 
+const characterCombinationArr = [
+  {
+    characterImg: Maxine,
+    dialouge: "Well, why are you still here?"
+  },
+  {
+    characterImg: MaxineII,
+    dialouge: "After hours of looking, Maxine wasn't able to find that page!"
+  },{
+    characterImg: Madeline,
+    dialouge: "But don't you worry, I'm on the case!"
+  },{
+    characterImg: Damien,
+    dialouge: "We didn't find that page, but I'm glad I found you."
+  },{
+    characterImg: Julian,
+    dialouge: "I can look again but it probably doesn't exist."
+  },{
+    characterImg: Juliette,
+    dialouge: "Can't find it, but at least we tried. Now shoo."
+  },
+
+
+]
+
+// Returns a random integer from 0 to 5;
+const int = Math.floor(Math.random() * 6); 
+
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
+    <Layout>
+    <main className="page-not-found">
       <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
+      <div>
+        <img src={characterCombinationArr[int].characterImg}></img>
+        <p className="char-quote">{characterCombinationArr[int].dialouge}</p>
+      </div>
+        <Link className="return-link blue"  to="/">Go home</Link>.
     </main>
+    </Layout>
   )
 }
 

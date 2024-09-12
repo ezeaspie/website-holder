@@ -30,24 +30,30 @@ const IndexPage = () => {
         <MainBanner/>
         <div className="container">
           <section className="blog-preview-list">
+            <h2 className="section-header">News</h2>
             <BlogPostList data={data}></BlogPostList>
           </section>
-          <section className="comics-preview-list">
-              {
-                comicData.map((comic)=>{
-                  return(
-                    <div className="comic-preview-item">
-                      <Link className="comic-preview-link-full" to={comic.secondUrl} key={comic.title}></Link>
-                      <img src={comic.image} alt={comic.title}/>
-                      <div className="comic-preview-content">
-                        <p className="comic-preview-tagline">{comic.tagline}</p>
-                        <Link className="comic-preview-link" to={comic.secondUrl} key={comic.title}>{'Read Now >>'}</Link>
+
+          <section>
+            <h2 className="section-header">Comics</h2>
+            <div className="comics-preview-list">
+                {
+                  comicData.map((comic)=>{
+                    return(
+                      <div className="comic-preview-item">
+                        <Link className="comic-preview-link-full" to={comic.secondUrl} key={comic.title}></Link>
+                        <img src={comic.image} alt={comic.title}/>
+                        <div className="comic-preview-content">
+                          <p className="comic-preview-tagline">{comic.tagline}</p>
+                          <Link className="comic-preview-link" to={comic.secondUrl} key={comic.title}>{'Read Now >>'}</Link>
+                        </div>
                       </div>
-                    </div>
-                  )
-                })
-              }
+                    )
+                  })
+                }
+            </div>
           </section>
+          
         </div>
       </Layout>
   )

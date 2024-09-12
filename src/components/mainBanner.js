@@ -41,7 +41,7 @@ const MainBanner = () => {
                     <h5 className={'banner-category ' + bannerInfo.color}>{bannerInfo.accentText}</h5>
                       <h2 className={"banner-headline " + 'pink' + "-banner"}>{bannerInfo.title}</h2>
                       <h3 className="banner-subhead">{bannerInfo.subtitle}</h3>
-                        <Link to="/" className='blog-link-button pink'>{"Read Now  >>"}</Link>
+                        <Link to="/" className='blog-link-button red'>{"Read Now  >>"}</Link>
                   </div>
         </div>
     )
